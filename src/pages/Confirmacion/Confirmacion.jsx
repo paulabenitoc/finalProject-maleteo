@@ -44,34 +44,3 @@ const Confirmacion = () => {
 export default Confirmacion;
 
 
-// import React, { useState } from 'react';
-// import Volver from '../../components/Volver/Volver';
-// import './Confirmacion.css'
-// import GuardianNav from '../../components/GuardianNav/GuardianNav.jsx';
-
-
-// const Confirmacion = () => {
-//   const [selectedOption, setSelectedOption] = useState('');
-
-//   const handleSelectChange = (event) => {
-//     setSelectedOption(event.target.value);
-//   };
-
-//   return (
-//     <div>
-//       <Volver></Volver>
-      
-//       <div>
-//         <h3>Petición de reserva</h3>
-//       </div>
-
-//       <div>
-        
-//       </div>
-//       <GuardianNav></GuardianNav>
-          
-//     </div>
-//   );
-// };
-
-// export default Confirmacion;
