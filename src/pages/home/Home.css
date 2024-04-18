@@ -1,0 +1,17 @@
+.item-select{
+    margin-left: 15px;
+}
+
+.tarifa24{
+    background-color: #FF8200;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.tarifaplus{
+    background-color: #01B5E6;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
