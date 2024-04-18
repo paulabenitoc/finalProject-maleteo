@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function mensajes() {
     return (
-        <div>mensajes</div>
+        <div>
+            <p>usuario</p>
+        </div>
     )
 }

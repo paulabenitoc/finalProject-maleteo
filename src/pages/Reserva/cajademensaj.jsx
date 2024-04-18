@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function cajademensaj() {
+export default function () {
     return (
-        <div>cajademensaj</div>
+        <div>
+            <h1>Mensajes</h1>
+        </div>
     )
 }
