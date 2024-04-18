@@ -60,3 +60,4 @@ const Confirmacion = () => {
 };
 
 export default Confirmacion;
+
