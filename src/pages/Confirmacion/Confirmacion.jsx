@@ -3,7 +3,6 @@ import Volver from '../../components/Volver/Volver';
 import './Confirmacion.css'
 import GuardianNav from '../../components/GuardianNav/GuardianNav.jsx';
 
-
 const Confirmacion = () => {
   return (
     <div>
