@@ -73,7 +73,7 @@ const Ubicaciones = () => {
       geocoder.setInput(ciudad);
     });
 
-    const marker = new mapboxgl.Marker({color: "#F68F24"}).setLngLat([-3.7038, 40.4168]).addTo(mapInstance); 
+    //const marker = new mapboxgl.Marker({color: "#F68F24"}).setLngLat([-3.7038, 40.4168]).addTo(mapInstance); 
     document.documentElement.classList.add('hide-scrollbar');
 
     mapInstance.on('load', () => {
