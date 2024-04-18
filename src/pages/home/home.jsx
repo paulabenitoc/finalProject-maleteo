@@ -15,6 +15,7 @@ const Home = () => {
       <Volver></Volver>
       <h2 className='item-select'>Selecciona</h2>
       <select value={selectedOption} onChange={handleSelectChange} className='options'>
+        {/* <option value="" disabled hidden>Continente</option> */}
         <option value="ASIA" className='item'>Asia</option>
         <option value="AMÉRICA" className='item'>América</option>
         <option value="ÁFRICA" className='item'>África</option>
