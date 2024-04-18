@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Volver from '../../components/Volver/Volver.jsx';
 import './Home.css'
-import Nav from '../../components/Nav/nav.jsx';
-
+import Nav from '../../components/Nav/Nav.jsx';
 
 const Home = () => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -44,7 +43,6 @@ const Home = () => {
       
       </div>
       
-    
           <Nav></Nav>
           
     </div>
