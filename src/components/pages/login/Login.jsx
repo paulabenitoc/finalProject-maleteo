@@ -1,4 +1,5 @@
 //import React from 'react'
+import './login.css'
 
 import { useState } from "react";
 
@@ -21,7 +22,7 @@ const Login = () => {
     }
 
   return (
-    <>
+    <article className="login-card">
         <button>volver</button>
         <div className="login-button-container">
             <nav>
@@ -35,7 +36,7 @@ const Login = () => {
             {typeLogin === 'login' ? <LoginUser handleInputs={handleInputs}/> : <RegUser handleInputs={handleInputs}/>}
         </div>
         <button>{buttonText}</button>
-    </>
+    </article>
 
   );
 };
