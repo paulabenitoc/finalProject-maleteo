@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Volver from '../../components/Volver/Volver';
 import './Home.css'
-import Nav from '../../components/nav/nav';
+import Nav from '../../components/Nav/Nav';
 
 
 const Home = () => {
