@@ -2,6 +2,21 @@
     margin-left: 15px;
 }
 
+.options{
+    height: 37px;
+    margin-left: 15px;
+    width: 240px;
+    color: #FF8200;
+    border-color: #FF8200;
+}
+
+.item{
+    color: #7D7D7D;
+}
+
+.ofertas{
+    margin-left: 15px;
+}
 .tarifa24{
     background-color: #FF8200;
     color: white;
