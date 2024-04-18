@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Volver from '../../components/Volver/Volver';
+import Volver from '../../components/Volver/Volver.jsx';
 import './Home.css'
-import Nav from '../../components/Nav/Nav';
+import Nav from '../../components/Nav/nav.jsx';
 
 
 const Home = () => {
@@ -15,15 +15,16 @@ const Home = () => {
     <div>
       <Volver></Volver>
       <h2 className='item-select'>Selecciona</h2>
-      <select value={selectedOption} onChange={handleSelectChange}>
-        <option value="ASIA">Asia</option>
-        <option value="AMÉRICA">América</option>
-        <option value="ÁFRICA">África</option>
-        <option value="ANTÁRTIDA">Antártida</option>
-        <option value="EUROPA">Europa</option>
-        <option value="OCEANÍA">Oceanía</option>
+      <select value={selectedOption} onChange={handleSelectChange} className='options'>
+        <option value="ASIA" className='item'>Asia</option>
+        <option value="AMÉRICA" className='item'>América</option>
+        <option value="ÁFRICA" className='item'>África</option>
+        <option value="ANTÁRTIDA" className='item'>Antártida</option>
+        <option value="EUROPA" className='item'>Europa</option>
+        <option value="OCEANÍA" className='item'>Oceanía</option>
       </select>
       
+        <div className='ofertas'>
         <div>
               <p>Nuestras tarifas fijas</p>
         </div>
@@ -39,6 +40,8 @@ const Home = () => {
         <p>Día adicional</p>
         <p>4€</p>
         <p>Por equipaje</p>
+      </div>
+      
       </div>
       
     
