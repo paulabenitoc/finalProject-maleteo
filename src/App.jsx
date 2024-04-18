@@ -23,7 +23,7 @@ function App() {
           <Route path='/usuario' element={<Usuario/>} />
           <Route path='/reserva' element={<HomeUbiRes/>} />
           <Route path='/reserva/ubicacion' element={<Ubicacion/>} />
-          <Route path='/reserva/ubicacion/ubicaciones' element={<Ubicaciones/>} />
+          <Route path='/reserva/ubicaciones' element={<Ubicaciones/>} />
         </Routes>
       </Router>
     </HomeUbiResContext.Provider>
