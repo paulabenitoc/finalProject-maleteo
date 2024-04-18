@@ -1,6 +1,8 @@
 import './App.css'
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import Presentacion from './components/pages/Presentacion/Presentacion.jsx';
+import Login from './components/pages/login/Login.jsx';
 
 
 function App() {
@@ -13,10 +15,9 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Presentacion/>}/>
-          
-          <Route>
+          <Route path='/login' element={<Login/>}/>
 
-          </Route>
+   
 
         </Routes>
 
