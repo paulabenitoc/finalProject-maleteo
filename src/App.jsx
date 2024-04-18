@@ -11,11 +11,11 @@ import {HomeUbiResContext} from './components/homeUbiRes/HomeUbiResContext';
 
 
 function App() {
-
+  const [ciudad, setCiudad] = useState('');
   return (
     <>
+    <HomeUbiResContext.Provider value={{ ciudad, setCiudad }}>
       <Router>
-        
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/confirmacion' element={<Confirmacion />} />
@@ -24,8 +24,8 @@ function App() {
           <Route path='/reserva/ubicacion' element={<Ubicacion/>} />
           <Route path='/reserva/ubicacion/ubicaciones' element={<Ubicaciones/>} />
         </Routes>
-
       </Router>
+    </HomeUbiResContext.Provider>
     </>
   )
 }
