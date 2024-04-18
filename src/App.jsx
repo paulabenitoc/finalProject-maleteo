@@ -1,4 +1,5 @@
-import './App.css'
+import './App.css';
+import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from './pages/home/home.jsx';
 import Confirmacion from './pages/Confirmacion/Confirmacion';
