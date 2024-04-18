@@ -1,18 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { useSpring, animated, config } from 'react-spring';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import mapboxgl from 'mapbox-gl';
-import ScrollUpButton from "react-scroll-up";
-import lupa from '../public/images/lupa.png';
-import atras from '../public/images/atras.png';
-import aspa from '../public/images/aspa.png';
-import brujula from '../public/images/brujula.png';
-import reloj from '../public/images/reloj.png';
-import equis from '../public/images/equis.png';
-import imgBtn from '../public/images/img-btn.png';
-import calendario from '../public/images/calendario.png';
-import maleta from '../public/images/maleta.png';
+import lupa from '../../public/images/lupa.png';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './HomeUbiRes.css';
 
