@@ -16,6 +16,9 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/confirmacion' element={<Confirmacion />} />
           <Route path='/usuario' element={<Usuario/>} />
+          <Route path='/reserva' element={<HomeUbiRes/>} />
+          <Route path='/reserva/ubicacion' element={<Ubicacion/>} />
+          <Route path='/reserva/ubicacion/ubicaciones' element={<Ubicaciones/>} />
         </Routes>
 
       </Router>
