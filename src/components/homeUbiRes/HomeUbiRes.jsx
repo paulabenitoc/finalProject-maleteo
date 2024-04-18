@@ -14,7 +14,7 @@ import imgBtn from '../public/images/img-btn.png';
 import calendario from '../public/images/calendario.png';
 import maleta from '../public/images/maleta.png';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import './App.css';
+import './HomeUbiRes.css';
 
 const HomeUbiRes = () => {
     const [ciudad, setCiudad] = useState('');
