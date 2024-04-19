@@ -1,4 +1,5 @@
 import ChatBot from 'react-simple-chatbot';
+import './ChatBot.css'
 
 const Chat = () => {
     return (
@@ -7,16 +8,12 @@ const Chat = () => {
                 steps={[
                     {
                         id: '1',
-                        message: 'Hola, muchas gracias por escoger mi hall para guardar tu maleta. Estaré encantada de cuidar de tu equipaje.',
+                        message: 'Hola, muchas gracias por escoger mi hall para guardar tu maleta. Estaré encantada de cuidar de tu equipaje. Mi teléfono es 634723485.',
                         trigger: '2',
                     },
                     {
                         id: '2',
                         user: true,
-                        trigger: '3',
-                    },
-                    {
-                        id: '3',
                         end: true,
                     },
                 ]}

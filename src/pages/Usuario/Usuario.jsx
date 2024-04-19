@@ -14,7 +14,6 @@ const handleSubmit = (data) => {
   };
 
   return (
-    
     <div>
       <div>
        <div className="user">
