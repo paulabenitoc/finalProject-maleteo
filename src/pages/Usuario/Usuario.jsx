@@ -1,12 +1,17 @@
 import React from 'react'
 import './Usuario.css'
+import './dialogStyles.css'
 import Nav from '../../components/Nav/nav';
+import { Dialog } from 'primereact/dialog';
+import { useState } from 'react';
+import Guardian from './Guardian/Guardian';
 
 function Usuario() {
+  const [visible, setVisible] = useState(false);
+
   return (
     
     <div>
-      <Nav></Nav>
       <div>
        <div className="user">
         <span>
@@ -17,8 +22,13 @@ function Usuario() {
         </div>
         <div className='menu-options'>
         <div className='user-options'>
+          <button className='register-button' label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)} >
             <h3>Conviértete en guardián</h3>
             <p>Puedes ganar 400€ de media al mes</p>
+          </button>
+          <Dialog visible={visible} onHide={() => setVisible(false)} className='dialog'>
+          <Guardian></Guardian>
+          </Dialog>
         </div>
         
         <div className='user-options'>
