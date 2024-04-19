@@ -3,6 +3,7 @@ import './App.css';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Calendario from './pages/Reserva/Calendario';
 import Thanks from './pages/Reserva/Thanks';
+import MapaUbicacion from './pages/Reserva/Mapaubicacion';
 
 
 function App() {
@@ -13,10 +14,10 @@ function App() {
         <Router>
           <Routes>
 
-            <Route path="/" element={<Calendario></Calendario>}>
-            </Route>
-            <Route path="/" element={<Thanks></Thanks>}></Route>
-            <Route path="/" element={<></>}></Route>
+            <Route path="/" element={<Calendario></Calendario>}></Route>
+            <Route path="/thanks" element={<Thanks></Thanks>}></Route>
+            <Route path="/mapaubicacion" element={<MapaUbicacion></MapaUbicacion>}></Route>
+
           </Routes>
         </Router>
 
