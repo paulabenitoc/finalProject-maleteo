@@ -1,6 +1,6 @@
 import React from 'react'
 import './Usuario.css'
-import Nav from '../../components/Nav/nav';
+import Nav from '../../components/nav/nav';
 
 function Usuario() {
   return (
