@@ -1,6 +1,6 @@
 .wellcome-card {
-    width: 188.5pt;
-    height: 310pt;
+    width: 89%;
+    height: 84.5%;
     align-items: center;
     flex-direction: column;
     background-color: white;
@@ -19,7 +19,12 @@
 }
 
 .wellcome-button {
-
+    font-size: 15px;
+    width: 65%;
+    height: 8%;
+    border-radius: 10px;
+    background-color: rgb(246, 143, 36);
+    color: white;
 }
 
 .prices-link {
