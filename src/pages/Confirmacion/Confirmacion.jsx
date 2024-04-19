@@ -21,7 +21,7 @@ const Confirmacion = () => {
         </div>
         
         <div className="user-buttons">
-          <button >Aceptar</button>
+          <button>Aceptar</button>
           <a href=''>Declinar</a>
         </div>
       </div>
@@ -38,6 +38,15 @@ const Confirmacion = () => {
           <button >Aceptar</button>
           <a href=''>Declinar</a>
         </div>
+        {/* <div className='user-options'>
+          <button className='register-button' label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)} >
+            <h3>Conviértete en guardián</h3>
+            <p>Puedes ganar 400€ de media al mes</p>
+          </button>
+          <Dialog visible={visible} onHide={() => setVisible(false)} className='dialog'>
+          <Guardian onSubmit={handleSubmit}></Guardian>
+          </Dialog>
+        </div> */}
       </div>
 
       <div className="user-profile">

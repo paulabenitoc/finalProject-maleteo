@@ -9,6 +9,10 @@ import Guardian from './Guardian/Guardian';
 function Usuario() {
   const [visible, setVisible] = useState(false);
 
+const handleSubmit = (data) => {
+    console.log("Datos enviados:", data);
+  };
+
   return (
     
     <div>
@@ -27,7 +31,7 @@ function Usuario() {
             <p>Puedes ganar 400€ de media al mes</p>
           </button>
           <Dialog visible={visible} onHide={() => setVisible(false)} className='dialog'>
-          <Guardian></Guardian>
+          <Guardian onSubmit={handleSubmit}></Guardian>
           </Dialog>
         </div>
         
