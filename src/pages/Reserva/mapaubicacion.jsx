@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default function MapaUbicacion() {
 
-
+    //  console.log("jjjh");
     const [characters, setCharacters] = useState([]);
 
     const getCharacters = () => {
