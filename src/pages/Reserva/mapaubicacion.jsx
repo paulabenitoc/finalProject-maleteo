@@ -4,30 +4,15 @@ export default function mapaUbicacion() {
     return (
         <>
             <div>
-                <p>boton de ubicacion</p>
-                <p>mapa ubi</p>
+                <div>COMPONENTE barra UBICACION FLOREN</div>
+                <div>
+                    <p>mapa ubi</p>
+                </div>
                 <div>
                     <div>
-                        <p>usuario</p>
-                        <p>img lugar</p>
-                        <p>img usuario</p>
-                        <p>estrellas</p>
-                        <p>ubicacion</p>
+                        <p> Volcar datos del usuario de la Api</p>
                     </div>
-                    <div>
-                        <p>usuario</p>
-                        <p>img lugar</p>
-                        <p>img usuario</p>
-                        <p>estrellas</p>
-                        <p>ubicacion</p>
-                    </div>
-                    <div>
-                        <p>usuario</p>
-                        <p>img lugar</p>
-                        <p>img usuario</p>
-                        <p>estrellas</p>
-                        <p>ubicacion</p>
-                    </div>
+
                 </div>
             </div>
         </>
