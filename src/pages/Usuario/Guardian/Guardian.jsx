@@ -2,6 +2,7 @@ import React from 'react';
 import './Guardian.css';
 
 export default function Guardian() {
+
   return (
     <div className='guardian'>
       <div>
@@ -16,6 +17,7 @@ export default function Guardian() {
           
           <div className='item-space'>
             <p>Ubicación</p>
+            <input type="text" name="ubicacion" value={formData.ubicacion} onChange={handleChange} />
           </div>
           
           <div className='item-space'>
