@@ -1,7 +1,6 @@
-import './App.css'
+import './App.css';
+import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-<<<<<<< Updated upstream
-=======
 import Home from './pages/home/home.jsx';
 import Confirmacion from './pages/Confirmacion/Confirmacion';
 import Usuario from './pages/Usuario/Usuario.jsx';
@@ -12,24 +11,15 @@ import {HomeUbiResContext} from './components/homeUbiRes/HomeUbiResContext';
 import Espacio from './pages/servicios/Espacio.jsx';
 import Servicios from './pages/servicios/Servicios.jsx';
 
->>>>>>> Stashed changes
 
 
 function App() {
-
+  const [ciudad, setCiudad] = useState('');
   return (
     <>
+    <HomeUbiResContext.Provider value={{ ciudad, setCiudad }}>
       <Router>
-        
-
         <Routes>
-<<<<<<< Updated upstream
-          
-          <Route>
-
-          </Route>
-
-=======
           <Route path='/home' element={<Home />} />
           <Route path='/confirmacion' element={<Confirmacion />} />
           <Route path='/usuario' element={<Usuario/>} />
@@ -38,11 +28,9 @@ function App() {
           <Route path='/reserva/ubicacion/ubicaciones' element={<Ubicaciones />} />
           <Route path='/espacio' element={<Espacio />} /> 
           <Route path='/servicios' element={<Servicios />} />  
->>>>>>> Stashed changes
         </Routes>
-
-
       </Router>
+    </HomeUbiResContext.Provider>
     </>
   )
 }

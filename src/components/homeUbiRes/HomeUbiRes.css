@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'catamaran';
+  src: url('../../public/fonts/Catamaran-Light.ttf') format('truetype');
+}
+
+body {
+  font-family: 'catamaran', sans-serif; /* Utiliza el nombre de la fuente definido en @font-face */
+  padding: 0px;
+  margin: 0px;
+}
+.miUbi{
+  background-color: white;
+  transition:background-color 0.2s;
+}
+.miUbi:hover{
+  background-color:#f68f2447;
+  cursor:pointer;
+}
+.pd{
+  padding:13pt;
+}
+.container-map{
+  background-color: red;
+}
+.d-block{
+  display: block;
+}
+.d-none{
+  display: none;
+}
+#map{
+  width: 100%;
+  height: 100vh;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.flecha{
+  width: 12pt;
+  height: auto; /* Para que la imagen ocupe todo el espacio disponible */
+}
+.fa-flecha{
+  color:black;
+  font-size: 30px;
+  transition:color 0.3s
+}
+.blanca{
+  color:white;
+}
+.center-text-white{
+  color:white;
+  margin: 0 auto;
+  
+}
+.container {
+  background-image: linear-gradient(to right, #ff9966, #ff5e62);
+  padding-bottom: 14.8pt;
+  padding-left: 13.5pt;
+  padding-right: 12.5pt;
+  transition:background-image 1s ese;
+}
+
+.amarillo {
+  background-image: linear-gradient(to right, #ff5e62, #ff9966); 
+}
+
+.respuestas{
+  padding: 10pt;
+}
+
+.titulo{
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.buscador{
+  width: calc(100% - 13.5pt);
+  display: flex;
+  align-items: center;
+  background-color: rgba(251, 251, 251, 1);
+  height: 29pt;
+  border-radius:3pt;
+  padding-top: 10pt;
+  padding-left: 10pt;
+  padding-bottom: 10pt;
+}
+
+.buscame{
+  width: calc(100% - 13.5pt);
+  display: flex;
+  align-items: center;
+  height: 29pt;
+  border-radius:3pt;
+  padding-top: 10pt;
+  padding-left: 10pt;
+  padding-bottom: 10pt;
+}
+.sugerencias{
+  width: calc(100% - 13.5pt);
+  display: flex;
+  flex-direction: column;
+  border-radius:3pt;
+  padding-top: 10pt;
+  padding-left: 10pt;
+  padding-bottom: 10pt;
+}
+
+.text{
+  font-size: 17pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.light{
+color:grey;
+font-size: 20px;
+}
+
+.divisor{
+  border: 0;
+  height: 1px;
+  margin-left:12pt;
+  margin-right:12pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: rgb(151, 151, 151); 
+}
+
+.icono{
+  width:15pt;
+  padding: 6pt;
+  margin-right: 10pt;
+}
+.brujula{
+  width: 25px;
+}
+.reloj{
+  width: 27px;  
+}
+.equis{
+  cursor: pointer;
+}
+.sombra{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
+
+.mt-2{
+  margin-top: 15px;
+}
+.mt-3{
+  margin-top: 20px;
+}
+.mt-4{
+  margin-top: 40px;
+}
+
+.mb-2{
+  margin-bottom: 14.8pt;
+}
+
+.input-buscador{
+  border:none;
+  background-color: rgba(251, 251, 251, 1);
+  width: 100%;
+  margin-right: 10pt;
+  color: rgba(92, 92, 92, 0.5); /* Puedes ajustar el color según tus preferencias */
+  font-size: 15pt;
+  line-height: 29pt;
+}
+.input-buscador::placeholder {
+  color: rgba(171, 171, 171, 0.5); /* Puedes ajustar el color según tus preferencias */
+  font-size: 15pt;
+  vertical-align: middle;
+}
+
+.input-buscador:focus {
+  border-color: orange; /* Cambia el color del borde al naranja cuando el input está enfocado */
+  caret-color: orange;
+  outline: none; /* Elimina el contorno predeterminado del input cuando está enfocado */
+}
+
+.info-buscar{
+  margin-top: 7pt;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.buscar{
+  border-radius:3pt;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  background-color:rgb(246, 143, 36);
+  color: white;
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.next{
+  position: fixed;
+  cursor: pointer;
+  bottom:200px;
+  z-index:99;
+  right:50px;
+}
+
+.btn-next{
+  width: 50px;
+}
+
+.hide-scrollbar{
+  overflow: hidden; 
+
+}
