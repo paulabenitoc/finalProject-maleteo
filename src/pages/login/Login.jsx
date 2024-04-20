@@ -4,8 +4,8 @@ import './login.css'
 import { useState } from "react";
 import axios from 'axios';
 
-import LoginUser from "../../loginUser/LoginUser";
-import RegUser from "../../regUser/RegUser";
+import LoginUser from "../../components/loginUser/LoginUser.jsx";
+import RegUser from "../../components/regUser/RegUser.jsx";
 
 const Login = () => {
 
@@ -19,6 +19,7 @@ const Login = () => {
         fecha_nacimiento: "2024-04-17",
         notificacion: false
     });
+    const [token, setToken] = useState('');
 
     const regUserApi = () => {
         return axios.post("http://localhost:3002/usuarios/register", usuario)
@@ -34,12 +35,14 @@ const Login = () => {
         return axios.post("http://localhost:3002/usuarios/login", usuario)
         .then((res) => {
             console.log(res);
+            setToken(res.data.data.token);
+            //console.log('Token :' ,res.data.data.token)
         })
         .catch((error) => {
             console.log(error);
         })
     };
-
+    console.log('variable de estado token :', token);
     const handleClick = (ev) => {
         ev.preventDefault();
         if (ev.target.id === 'register') {

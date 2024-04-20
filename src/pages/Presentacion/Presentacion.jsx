@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 
 import './presentacion.css';
 
-import Preloader from '../../preloader/Preloader.jsx';
-import Wellcome1 from '../../wellcome/Wellcome1.jsx';
-import Wellcome2 from '../../wellcome/Wellcome2.jsx';
+import Preloader from '../../components/preloader/Preloader.jsx';
+import Wellcome1 from '../../components/wellcome/Wellcome1.jsx';
+import Wellcome2 from '../../components/wellcome/Wellcome2.jsx';
 
 const Presentacion = () => {
 

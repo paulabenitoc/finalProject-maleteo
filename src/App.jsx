@@ -1,8 +1,8 @@
 import './App.css'
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import Presentacion from './components/pages/Presentacion/Presentacion.jsx';
-import Login from './components/pages/login/Login.jsx';
+import Presentacion from './pages/Presentacion/Presentacion.jsx';
+import Login from './pages/login/Login.jsx';
 
 
 function App() {
