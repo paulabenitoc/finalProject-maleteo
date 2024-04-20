@@ -33,10 +33,6 @@ const Presentacion = () => {
       {showSplash ? <Preloader/> : (
         wellcome === 'wellcome1' ? <Wellcome1 handleClick={handleClick}/> : <Wellcome2 handleClick={handleClick}/>
       )}
-      {/*<Preloader/>*/}
-      {/*wellcome === 'wellcome1' ? <Wellcome1 handleClick={handleClick}/> : <Wellcome2 handleClick={handleClick}/>*/}
-      
-      
     </div>
   )
 }

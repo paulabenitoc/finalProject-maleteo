@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-export default function home() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-=======
 import React, { useState } from 'react';
 import Volver from '../../components/Volver/Volver.jsx';
 import './Home.css'
@@ -62,4 +51,4 @@ const Home = () => {
 };
 
 export default Home;
->>>>>>> origin/develop
+
