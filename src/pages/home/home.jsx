@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-export default function home() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-=======
 import React, { useState } from 'react';
 import Volver from '../../components/Volver/Volver.jsx';
 import './Home.css'
@@ -26,7 +15,6 @@ const Home = () => {
       <Volver></Volver>
       <h2 className='item-select'>Selecciona</h2>
       <select value={selectedOption} onChange={handleSelectChange} className='options'>
-        {/* <option value="" disabled hidden>Continente</option> */}
         <option value="ASIA" className='item'>Asia</option>
         <option value="AMÉRICA" className='item'>América</option>
         <option value="ÁFRICA" className='item'>África</option>
@@ -34,32 +22,32 @@ const Home = () => {
         <option value="EUROPA" className='item'>Europa</option>
         <option value="OCEANÍA" className='item'>Oceanía</option>
       </select>
-      
-        <div className='ofertas'>
+
+      <div className='ofertas'>
         <div>
-              <p>Nuestras tarifas fijas</p>
+          <p>Nuestras tarifas fijas</p>
         </div>
-          
-          
-      <div className='tarifa24'>
-        <p>24 Horas</p>
-        <p>6€</p>
-        <p>Por equipaje</p>
+
+
+        <div className='tarifa24'>
+          <p>24 Horas</p>
+          <p>6€</p>
+          <p>Por equipaje</p>
+        </div>
+
+        <div className='tarifaplus'>
+          <p>Día adicional</p>
+          <p>4€</p>
+          <p>Por equipaje</p>
+        </div>
+
       </div>
 
-      <div className='tarifaplus'>
-        <p>Día adicional</p>
-        <p>4€</p>
-        <p>Por equipaje</p>
-      </div>
-      
-      </div>
-      
-          <Nav></Nav>
-          
+      <Nav></Nav>
+
     </div>
   );
 };
 
 export default Home;
->>>>>>> origin/develop
+
