@@ -15,7 +15,6 @@ const Home = () => {
       <Volver></Volver>
       <h1 className='item-select'>Selecciona</h1>
       <select value={selectedOption} onChange={handleSelectChange} className='options'>
-        {/* <option value="" disabled hidden>Continente</option> */}
         <option value="ASIA" className='item'>Asia</option>
         <option value="AMÉRICA" className='item'>América</option>
         <option value="ÁFRICA" className='item'>África</option>
@@ -23,31 +22,32 @@ const Home = () => {
         <option value="EUROPA" className='item'>Europa</option>
         <option value="OCEANÍA" className='item'>Oceanía</option>
       </select>
-      
-        <div className='ofertas'>
+
+      <div className='ofertas'>
         <div>
-              <h1>Nuestras tarifas fijas</h1>
+          <h1>Nuestras tarifas fijas</h1>
         </div>
-          
-          
-      <div className='tarifa24'>
+
+
+        <div className='tarifa24'>
         <p style={{margin:"0%"}}>24 Horas</p>
         <p style={{fontSize:"50px", margin:"0%"}}>6€</p>
         <p style={{margin:"0%"}}>Por equipaje</p>
-      </div>
+        </div>
 
-      <div className='tarifaplus'>
+        <div className='tarifaplus'>
         <p style={{margin:"0%"}}>Día adicional</p>
         <p style={{fontSize:"50px", margin:"0%"}}>4€</p>
         <p style={{margin:"0%"}}>Por equipaje</p>
+        </div>
+
       </div>
-      
-      </div>
-      
-          <Nav></Nav>
-          
+
+      <Nav></Nav>
+
     </div>
   );
 };
 
 export default Home;
+

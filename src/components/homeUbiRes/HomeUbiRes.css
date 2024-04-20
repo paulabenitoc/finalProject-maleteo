@@ -77,6 +77,9 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+.input-a{
+  flex-grow:1;
+}
 
 .buscador{
   width: calc(100% - 13.5pt);
@@ -170,6 +173,7 @@ font-size: 20px;
   color: rgba(92, 92, 92, 0.5); /* Puedes ajustar el color según tus preferencias */
   font-size: 15pt;
   line-height: 29pt;
+  flex-grow: 1;
 }
 .input-buscador::placeholder {
   color: rgba(171, 171, 171, 0.5); /* Puedes ajustar el color según tus preferencias */
