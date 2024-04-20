@@ -4,7 +4,9 @@ import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './style.css';
-import Forward from '../../components/Forward/Forward';
+import { Link } from 'react-router-dom';
+import Nav from '../../components/nav/nav';
+
 
 export default function MapaUbicacion() {
     const geocoderContainer = useRef(null);
@@ -51,10 +53,15 @@ export default function MapaUbicacion() {
 
 
             <div className="chars">
-                <Forward />
+
                 {characters.map((character, index) => (<div className='card' key={index}>
-                    <div>
-                        <img className='imagenlugar' src={character.fotoLugar} />
+
+                    <div className='boton'>
+                        <Link to='/mapaubicacioncpy' className="div-button">
+                            <button className="forward">
+                                <img className='imagenlugar' src={character.fotoLugar} />
+                            </button>
+                        </Link>
                     </div>
                     <h2>{character.nombre}</h2>
                     <img className='imagenguard' src={character.fotos} />
@@ -62,9 +69,8 @@ export default function MapaUbicacion() {
 
                 </div>))}
 
-
             </div>
-
+            <Nav className='navi'></Nav>
         </>
 
     );
