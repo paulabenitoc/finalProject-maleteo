@@ -4,7 +4,6 @@ import
  './Confirmacion.css'
 import GuardianNav from '../../components/GuardianNav/GuardianNav.jsx';
 import { Dialog } from 'primereact/dialog';
-import { useState } from 'react';
 import ChatBot from '../../components/ChatBot/ChatBot.jsx'
 
 
@@ -64,7 +63,7 @@ const Confirmacion = () => {
           </div>
         ))}
       </div>
-          {/* <h4>Carlos</h4>
+        {/* <h4>Carlos</h4>
           <p>Depósito: 12/04</p>
           <p>Recogida: 14/04</p>
         </div>
