@@ -13,6 +13,8 @@ import Calendario from './pages/Reserva/Calendario.jsx';
 import MapaUbicacion from './pages/Reserva/Mapaubicacion.jsx';
 import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import Login from './pages/login/Login.jsx';
+import Thanks from './pages/Reserva/thanks.jsx';
+import MapaUbicacioncpy from './pages/Reserva/Mapaubicacioncpy.jsx';
 
 // cambio a nueva rama
 
@@ -21,10 +23,12 @@ function App() {
   const [idMarker, setMarker] = useState('');
   const [markerUbi, setMarkerUbi] = useState(null);
   const [miUbi, setMiUbi] = useState(null);
+  // const [dias, setDias] = useState(null);
+  // const [horas, setHoras] = useState(null);
   return (
     <>
       <PrimeReactProvider>
-        <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi }}>
+        <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi, }}>
 
           <Router>
             <Routes>
@@ -38,6 +42,8 @@ function App() {
               <Route path='/reserva/ubicaciones' element={<Ubicaciones />} />
               <Route path='/calendario' element={<Calendario />} />
               <Route path='/mapaubicacion' element={<MapaUbicacion />} />
+              <Route path='/mapaubicacioncpy' element={<MapaUbicacioncpy />} />
+              <Route path='/thanks' element={<Thanks />} />
             </Routes>
           </Router>
         </HomeUbiResContext.Provider>

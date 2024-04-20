@@ -3,6 +3,8 @@ import axios from "axios";
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import './style.css';
+import Forward from '../../components/Forward/Forward';
 
 export default function MapaUbicacion() {
     const geocoderContainer = useRef(null);
@@ -43,17 +45,23 @@ export default function MapaUbicacion() {
     return (
         <>
 
-            <div ref={geocoderContainer}></div>
+            <div className='bar' ref={geocoderContainer}></div>
 
-            <div id='map' ref={mapContainer}></div>
+            <div className='mapss' id='map' ref={mapContainer}></div>
 
 
             <div className="chars">
-                {characters.map((character, index) => (<div key={index}>
+                <Forward />
+                {characters.map((character, index) => (<div className='card' key={index}>
+                    <div>
+                        <img className='imagenlugar' src={character.fotoLugar} />
+                    </div>
                     <h2>{character.nombre}</h2>
-                    <img src={character.fotos} />
+                    <img className='imagenguard' src={character.fotos} />
                     <p>{character.ubicacion}</p>
+
                 </div>))}
+
 
             </div>
 

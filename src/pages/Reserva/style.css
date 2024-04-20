@@ -1,0 +1,55 @@
+/* ESTOS ES EL CSS DE LA PAGINA MAPAUBICACION */
+
+.bar {
+    position: absolute;
+    width: 80%;
+    align-items: center;
+    top: 12%;
+    left: 10%;
+}
+
+.chars {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.card {
+    display: flex;
+}
+
+.imagenlugar {
+    width: 150px;
+    height: 150px;
+}
+
+.imagenguard {
+    width: 100px;
+    height: 100px;
+}
+
+.mapboxgl-map {
+    position: relative;
+}
+
+/* ESTO ES EL CSS DE PAGINA THANKS */
+.back {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.res {
+    margin-top: 75px;
+    text-align: center;
+    height: 335px;
+}
+
+.res-txt {
+    margin-left: 73px;
+    margin-right: 101px;
+}
