@@ -7,7 +7,7 @@ const Volver = () => {
   };
 
   return (
-    <div style={{ cursor: 'pointer' }} onClick={handleClick} className='container'>
+    <div style={{ cursor: 'pointer' }} onClick={handleClick}>
       <span className='item'>&#5176;</span> 
     </div>
   );

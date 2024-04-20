@@ -1,0 +1,8 @@
+.presentation {
+    width: 100%;
+    height: 46em;
+    background-color: rgb(255, 206, 50);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}

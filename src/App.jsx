@@ -11,18 +11,25 @@ import { HomeUbiResContext } from './components/homeUbiRes/HomeUbiResContext';
 import { PrimeReactProvider } from 'primereact/api';
 import Calendario from './pages/Reserva/Calendario.jsx';
 import MapaUbicacion from './pages/Reserva/Mapaubicacion.jsx';
+import Presentacion from './pages/Presentacion/Presentacion.jsx';
+import Login from './pages/login/Login.jsx';
 
 
 
 function App() {
   const [ciudad, setCiudad] = useState('');
+  const [idMarker, setMarker] = useState('');
+  const [markerUbi, setMarkerUbi] = useState(null);
+  const [miUbi, setMiUbi] = useState(null);
   return (
     <>
       <PrimeReactProvider>
-        <HomeUbiResContext.Provider value={{ ciudad, setCiudad }}>
+      <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi }}>
 
           <Router>
             <Routes>
+              <Route path='/' element={<Presentacion/>}/>
+              <Route path='/login' element={<Login/>}/>
               <Route path='/home' element={<Home />} />
               <Route path='/confirmacion' element={<Confirmacion />} />
               <Route path='/usuario' element={<Usuario />} />
@@ -35,7 +42,6 @@ function App() {
           </Router>
         </HomeUbiResContext.Provider>
       </PrimeReactProvider>
-
     </>
   )
 }
