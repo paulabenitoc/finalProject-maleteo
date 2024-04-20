@@ -7,7 +7,12 @@ import Usuario from './pages/Usuario/Usuario.jsx';
 import HomeUbiRes from './components/homeUbiRes/HomeUbiRes';
 import Ubicacion from './components/homeUbiRes/Ubicacion';
 import Ubicaciones from './components/homeUbiRes/Ubicaciones';
-import {HomeUbiResContext} from './components/homeUbiRes/HomeUbiResContext';
+import { HomeUbiResContext } from './components/homeUbiRes/HomeUbiResContext';
+import { PrimeReactProvider } from 'primereact/api';
+import Calendario from './pages/Reserva/Calendario.jsx';
+import MapaUbicacion from './pages/Reserva/Mapaubicacion.jsx';
+import Presentacion from './pages/Presentacion/Presentacion.jsx';
+import Login from './pages/login/Login.jsx';
 
 
 
@@ -18,18 +23,25 @@ function App() {
   const [miUbi, setMiUbi] = useState(null);
   return (
     <>
-    <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi }}>
-      <Router>
-        <Routes>
-          <Route path='/home' element={<Home />} />
-          <Route path='/confirmacion' element={<Confirmacion />} />
-          <Route path='/usuario' element={<Usuario/>} />
-          <Route path='/reserva' element={<HomeUbiRes/>} />
-          <Route path='/reserva/ubicacion' element={<Ubicacion/>} />
-          <Route path='/reserva/ubicaciones' element={<Ubicaciones/>} />
-        </Routes>
-      </Router>
-    </HomeUbiResContext.Provider>
+      <PrimeReactProvider>
+      <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi }}>
+
+          <Router>
+            <Routes>
+              <Route path='/' element={<Presentacion/>}/>
+              <Route path='/login' element={<Login/>}/>
+              <Route path='/home' element={<Home />} />
+              <Route path='/confirmacion' element={<Confirmacion />} />
+              <Route path='/usuario' element={<Usuario />} />
+              <Route path='/reserva' element={<HomeUbiRes />} />
+              <Route path='/reserva/ubicacion' element={<Ubicacion />} />
+              <Route path='/reserva/ubicaciones' element={<Ubicaciones />} />
+              <Route path='/calendario' element={<Calendario />} />
+              <Route path='/mapaubicacion' element={<MapaUbicacion />} />
+            </Routes>
+          </Router>
+        </HomeUbiResContext.Provider>
+      </PrimeReactProvider>
     </>
   )
 }
