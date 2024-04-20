@@ -14,7 +14,7 @@ import MapaUbicacion from './pages/Reserva/Mapaubicacion.jsx';
 import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import Login from './pages/login/Login.jsx';
 
-
+// cambio a nueva rama
 
 function App() {
   const [ciudad, setCiudad] = useState('');
@@ -24,12 +24,12 @@ function App() {
   return (
     <>
       <PrimeReactProvider>
-      <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi }}>
+        <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi }}>
 
           <Router>
             <Routes>
-              <Route path='/' element={<Presentacion/>}/>
-              <Route path='/login' element={<Login/>}/>
+              <Route path='/' element={<Presentacion />} />
+              <Route path='/login' element={<Login />} />
               <Route path='/home' element={<Home />} />
               <Route path='/confirmacion' element={<Confirmacion />} />
               <Route path='/usuario' element={<Usuario />} />
