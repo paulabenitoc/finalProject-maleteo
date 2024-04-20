@@ -31,7 +31,7 @@ const handleSubmit = (data) => {
         </div>
         
         <div className="user-buttons">
-          <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
+          <button style={{ cursor: 'pointer' }} className="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
           <Dialog visible={visible} onHide={() => setVisible(false)}>
             <ChatBot onSubmit={handleSubmit}></ChatBot>
           </Dialog>
@@ -48,7 +48,7 @@ const handleSubmit = (data) => {
         </div>
         
         <div className="user-buttons">
-          <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
+          <button style={{ cursor: 'pointer' }} className="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
           <Dialog visible={visible} onHide={() => setVisible(false)}>
             <ChatBot onSubmit={handleSubmit}></ChatBot>
           </Dialog>
@@ -65,7 +65,7 @@ const handleSubmit = (data) => {
         </div>
         
         <div className="user-buttons">
-          <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
+          <button style={{ cursor: 'pointer' }} className="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
           <Dialog visible={visible} onHide={() => setVisible(false)}>
             <ChatBot onSubmit={handleSubmit}></ChatBot>
           </Dialog>

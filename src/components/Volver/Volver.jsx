@@ -8,7 +8,7 @@ const Volver = () => {
 
   return (
     <div style={{ cursor: 'pointer' }} onClick={handleClick}>
-      <span className='item'>&#5176;</span> 
+      <span className='volver-component'>&#60;</span> 
     </div>
   );
 };
