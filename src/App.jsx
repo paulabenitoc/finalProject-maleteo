@@ -13,9 +13,12 @@ import {HomeUbiResContext} from './components/homeUbiRes/HomeUbiResContext';
 
 function App() {
   const [ciudad, setCiudad] = useState('');
+  const [idMarker, setMarker] = useState('');
+  const [markerUbi, setMarkerUbi] = useState(null);
+  const [miUbi, setMiUbi] = useState(null);
   return (
     <>
-    <HomeUbiResContext.Provider value={{ ciudad, setCiudad }}>
+    <HomeUbiResContext.Provider value={{ ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi }}>
       <Router>
         <Routes>
           <Route path='/home' element={<Home />} />
