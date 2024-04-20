@@ -125,7 +125,7 @@ const Ubicacion = () => {
       <hr className='divisor' />
     </div>      
     
-    <NavLink to="/reserva/ubicacion/ubicaciones" onClick={() => {setCiudad(inputCiudad.current.value)}} className='next'>
+    <NavLink to="/reserva/ubicaciones" onClick={() => {setCiudad(inputCiudad.current.value)}} className='next'>
       <img className='btn-next' src={imgBtn} alt="" />
     </NavLink>
     
