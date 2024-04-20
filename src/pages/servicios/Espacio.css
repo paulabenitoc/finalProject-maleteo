@@ -32,3 +32,10 @@ hr{
     margin-right: 5%;
 }
 
+.next_btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-top: 65%;
+}
+

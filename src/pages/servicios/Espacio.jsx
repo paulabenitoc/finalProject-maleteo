@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Volver from '../../components/Volver/Volver';
 import './Espacio.css';
+import { Link } from 'react-router-dom';
 
 function Espacio() {
   const [mostrarOpciones1, setMostrarOpciones1] = useState(false);
@@ -63,7 +64,12 @@ function Espacio() {
         )}
         <p>{!opcionSeleccionada2 ? 'Selecciona una opción' : opcionSeleccionada2}</p>
           </div>
-          <hr />
+      <hr />
+      <div className='next_btn '>
+        <Link to='/servicios'>
+          <a style={{ borderRadius: "100%", cursor: "pointer" }}><img src="public/images/img-btn.png" alt="next" /></a>
+          </Link>
+      </div>
     </div>
   );
 }
