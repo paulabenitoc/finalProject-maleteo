@@ -11,8 +11,9 @@
 
 
 .nav-bar {
-  list-style: none; 
-  padding: 0; 
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .nav-item {
@@ -20,6 +21,6 @@
   margin: 0 25px; 
 }
 
-.nav-img {
+.nav-icon {
   height: 30px;
 }

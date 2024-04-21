@@ -1,7 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Home from './pages/home/home.jsx';
 import Confirmacion from './pages/Confirmacion/Confirmacion';
 import Usuario from './pages/Usuario/Usuario.jsx';
 import HomeUbiRes from './components/homeUbiRes/HomeUbiRes';
@@ -15,6 +14,7 @@ import Calendario from './pages/Reserva/Calendario.jsx';
 import MapaUbicacion from './pages/Reserva/Mapaubicacion.jsx';
 import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import Login from './pages/login/Login.jsx';
+import Tarifas from './pages/home/home.jsx';
 
 
 
@@ -40,7 +40,7 @@ horas, setHoras, tarifa, setTarifa, total, setTotal, numPiezas, setNumPiezas, dD
             <Routes>
               <Route path='/' element={<Presentacion/>}/>
               <Route path='/login' element={<Login/>}/>
-              <Route path='/home' element={<Home />} />
+              <Route path='/tarifas' element={<Tarifas />} />
               <Route path='/confirmacion' element={<Confirmacion />} />
               <Route path='/usuario' element={<Usuario />} />
               <Route path='/reserva' element={<HomeUbiRes />} />
