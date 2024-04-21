@@ -3,7 +3,7 @@ import Volver from '../../components/Volver/Volver.jsx';
 import './Home.css'
 import Nav from '../../components/nav/nav.jsx';
 
-const Home = () => {
+const Tarifas = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleSelectChange = (event) => {
@@ -13,7 +13,8 @@ const Home = () => {
   return (
     <div>
       <Volver></Volver>
-      <h2 className='item-select'>Selecciona</h2>
+      <div className='box1'>
+      <h1 className='item-select'>Selecciona</h1>
       <select value={selectedOption} onChange={handleSelectChange} className='options'>
         <option value="ASIA" className='item'>Asia</option>
         <option value="AMÉRICA" className='item'>América</option>
@@ -25,29 +26,28 @@ const Home = () => {
 
       <div className='ofertas'>
         <div>
-          <p>Nuestras tarifas fijas</p>
+          <h1 className='tarifas-fijas'>Nuestras tarifas fijas</h1>
         </div>
 
 
         <div className='tarifa24'>
-          <p>24 Horas</p>
-          <p>6€</p>
-          <p>Por equipaje</p>
+        <p style={{margin:"0%"}}>24 Horas</p>
+        <p style={{fontSize:"50px", margin:"0%"}}>6€</p>
+        <p style={{margin:"0%"}}>Por equipaje</p>
         </div>
 
         <div className='tarifaplus'>
-          <p>Día adicional</p>
-          <p>4€</p>
-          <p>Por equipaje</p>
+        <p style={{margin:"0%"}}>Día adicional</p>
+        <p style={{fontSize:"50px", margin:"0%"}}>4€</p>
+        <p style={{margin:"0%"}}>Por equipaje</p>
         </div>
 
       </div>
-
+    </div>
       <Nav></Nav>
 
     </div>
   );
 };
 
-export default Home;
-
+export default Tarifas;
