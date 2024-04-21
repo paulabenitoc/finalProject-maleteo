@@ -1,10 +1,9 @@
-import { useState, useRef, createContext, useContext, useEffect } from 'react';
-import { useSpring, animated, config } from 'react-spring';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {useState, useRef, createContext, useContext, useEffect} from 'react';
+import {useSpring, animated, config} from 'react-spring';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {NavLink} from 'react-router-dom';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import { HomeUbiResContext } from './HomeUbiResContext';
-//import useMiContexto  from './HomeUbiResContext';
+import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
+import {HomeUbiResContext} from './HomeUbiResContext';
 import mapboxgl from 'mapbox-gl';
 import axios from 'axios';
 import aspa from '../../../public/images/aspa.png';
