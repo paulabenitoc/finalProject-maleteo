@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Calendar } from 'primereact/calendar';
-
+import { HomeUbiResContext } from "../../components/homeUbiRes/HomeUbiResContext";
 
 export default function Calendario() {
     const [datetime24h, setDateTime24h] = useState(null);
     const [datetime24h2, setDateTime24h2] = useState(null);
     const [selectedNumber, setSelectedNumber] = useState("");
+    const { dias } = useContext(HomeUbiResContext);
+    const { setDias } = useContext(HomeUbiResContext);
+    const { horas } = useContext(HomeUbiResContext);
+    const { setHoras } = useContext(HomeUbiResContext);
 
     const handleChange = (event) => {
         setSelectedNumber(parseInt(event.target.value));

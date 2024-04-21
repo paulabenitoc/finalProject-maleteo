@@ -14,9 +14,12 @@ import Calendario from './pages/Reserva/Calendario.jsx';
 import MapaUbicacion from './pages/Reserva/Mapaubicacion.jsx';
 import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import Login from './pages/login/Login.jsx';
+import Thanks from './pages/Reserva/thanks.jsx';
+import MapaUbicacioncpy from './pages/Reserva/Mapaubicacioncpy.jsx';
+import Ficha from './pages/Reserva/Ficha.jsx';
 import Tarifas from './pages/home/home.jsx';
 
-
+// cambio a nueva rama
 
 function App() {
   const [ciudad, setCiudad] = useState('');
@@ -50,6 +53,9 @@ horas, setHoras, tarifa, setTarifa, total, setTotal, numPiezas, setNumPiezas, dD
               <Route path='/reserva/horas' element={<Horas/>} />
               <Route path='/calendario' element={<Calendario />} />
               <Route path='/mapaubicacion' element={<MapaUbicacion />} />
+              <Route path='/mapaubicacioncpy' element={<MapaUbicacioncpy />} />
+              <Route path='/ficha' element={<Ficha />} />
+              <Route path='/thanks' element={<Thanks />} />
             </Routes>
           </Router>
         </HomeUbiResContext.Provider>
