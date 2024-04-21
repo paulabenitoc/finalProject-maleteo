@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form'
 import './Guardian.css';
-import CloseCross from '../../../components/CloseCross/CloseCross';
 
 export default function Guardian({ onSubmit }) {
     const { register, handleSubmit, formState: { isValid } } = useForm();
@@ -15,7 +14,6 @@ export default function Guardian({ onSubmit }) {
 
     return (
         <div className='guardian'>
-            <CloseCross></CloseCross>
             <div className="config">
                 <h3>Configura tu espacio en muy pocos pasos</h3>
             </div>
