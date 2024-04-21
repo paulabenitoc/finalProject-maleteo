@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-@media(min-width:960px) {
+/* @media(min-width:960px) {
     body {
         width: 100vw;
     }
@@ -16,4 +16,4 @@
     .presentation {
         background-color: tomato;
     }
-}
+} */

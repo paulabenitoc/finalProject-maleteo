@@ -23,7 +23,6 @@
 
 .welcome__container {
     width: 100%;
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,7 +68,6 @@
     align-items: center;
     flex-direction: column;
     width: 80%;
-    /* margin-block-start: 40px; */
 }
 
 @media(max-width:960px) {
