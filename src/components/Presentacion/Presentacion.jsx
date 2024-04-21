@@ -29,7 +29,7 @@ const Presentacion = () => {
   }
 
   return (
-    <div className="presentation">
+    <div className="presentacion">
       {showSplash ? <Preloader /> : (
         wellcome === 'wellcome1' ? <Wellcome1 handleClick={handleClick} /> : <Wellcome2 handleClick={handleClick} />
       )}
