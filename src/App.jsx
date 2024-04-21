@@ -16,7 +16,7 @@ import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import Login from './pages/login/Login.jsx';
 import Thanks from './pages/Reserva/thanks.jsx';
 import MapaUbicacioncpy from './pages/Reserva/mapaubicacioncpy.jsx';
-import Ficha from './pages/Reserva/Ficha.jsx';
+import Ficha from './pages/Reserva/ficha.jsx';
 import Tarifas from './pages/home/home.jsx';
 
 // cambio a nueva rama
