@@ -1,6 +1,5 @@
 //import React from 'react';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 import './presentacion.css';
 
@@ -11,30 +10,16 @@ import Wellcome2 from '../../components/wellcome/Wellcome2.jsx';
 const Presentacion = () => {
 
   const [showSplash, setShowSplash] = useState(true);
-  const [wellcome, setWellcome] = useState('wellcome1');
-  const [listPrices, setLitsPrices] = useState([]);
 
-  const pricesApi = () => {
-    return axios.get("http://localhost:3002/tarifa")
-    .then((res) => {
-        console.log('primer log', res);
-        setLitsPrices(res.data.data)
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-};
+  const [wellcome, setWellcome] = useState('wellcome1');
 
   useEffect(() => {
-
-    pricesApi();
-
     const timer = setTimeout(() => {
       setShowSplash(false);
     }, 3000);
 
     return () => clearTimeout(timer);
-  },[])
+  }, [])
 
 
 
@@ -45,9 +30,13 @@ const Presentacion = () => {
 
   return (
     <div className="presentation">
-      {showSplash ? <Preloader/> : (
-        wellcome === 'wellcome1' ? <Wellcome1 handleClick={handleClick}/> : <Wellcome2 listPrices={listPrices}/>
+      {showSplash ? <Preloader /> : (
+        wellcome === 'wellcome1' ? <Wellcome1 handleClick={handleClick} /> : <Wellcome2 handleClick={handleClick} />
       )}
+      {/*<Preloader/>*/}
+      {/*wellcome === 'wellcome1' ? <Wellcome1 handleClick={handleClick}/> : <Wellcome2 handleClick={handleClick}/>*/}
+
+
     </div>
   )
 }

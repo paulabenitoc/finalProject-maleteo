@@ -50,4 +50,5 @@ const Tarifas = () => {
   );
 };
 
+
 export default Tarifas;
