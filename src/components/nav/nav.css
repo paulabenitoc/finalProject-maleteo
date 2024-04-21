@@ -13,6 +13,7 @@
 .nav-bar {
     list-style: none;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .nav-item {

@@ -3,7 +3,7 @@ import Volver from '../../components/Volver/Volver.jsx';
 import './Home.css'
 import Nav from '../../components/nav/nav.jsx';
 
-const Home = () => {
+const Tarifas = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleSelectChange = (event) => {
@@ -11,8 +11,9 @@ const Home = () => {
   };
 
   return (
-    <div className='box1'>
+    <div>
       <Volver></Volver>
+      <div className='box1'>
       <h1 className='item-select'>Selecciona</h1>
       <select value={selectedOption} onChange={handleSelectChange} className='options'>
         <option value="ASIA" className='item'>Asia</option>
@@ -25,7 +26,7 @@ const Home = () => {
 
       <div className='ofertas'>
         <div>
-          <h1>Nuestras tarifas fijas</h1>
+          <h1 className='tarifas-fijas'>Nuestras tarifas fijas</h1>
         </div>
 
 
@@ -42,11 +43,11 @@ const Home = () => {
         </div>
 
       </div>
-
+    </div>
       <Nav></Nav>
 
     </div>
   );
 };
 
-export default Home;
+export default Tarifas;

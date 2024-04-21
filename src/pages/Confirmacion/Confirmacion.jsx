@@ -31,10 +31,10 @@ const Confirmacion = () => {
 
   return (
 
-    <div>
+    <div className='confirmacion-page'>
       <Volver/>
       <div className='reservation'>
-        <h1>Petición de reserva</h1>
+        <h1 className='peticion-reserva'>Petición de reserva</h1>
       </div>
       <div className="user-profile">
         {reservas.map((reserva, index) => (
