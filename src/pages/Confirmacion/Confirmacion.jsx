@@ -17,8 +17,11 @@ import ChatBot from '../../components/ChatBot/ChatBot.jsx'
 
 
 const Confirmacion = () => {
-
-   const [reservas, setReservas] = useState([]);
+    const [visible, setVisible] = useState(false);
+    const handleSubmit = (data) => {
+    console.log("Datos enviados:", data);
+    };
+    const [reservas, setReservas] = useState([]);
 
   useEffect(() => {
     const obtenerReservas = async () => {
@@ -55,8 +58,11 @@ const Confirmacion = () => {
               <p className='text_inf'>Recogida -  {reserva.retirada}</p>
             </div>
             <div className="user-buttons">
-              <button >Aceptar</button>
-              <a href=''>Declinar</a>
+              <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
+              <Dialog visible={visible} onHide={() => setVisible(false)}>
+            <ChatBot onSubmit={handleSubmit}></ChatBot>
+            </Dialog>
+            <a href=''>Declinar</a>
             </div>
             </div>
             <hr />

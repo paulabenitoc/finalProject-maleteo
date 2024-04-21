@@ -6,6 +6,7 @@ import axios from 'axios';
 
 import LoginUser from "../../components/loginUser/LoginUser.jsx";
 import RegUser from "../../components/regUser/RegUser.jsx";
+import Volver from '../../components/Volver/Volver.jsx';
 
 const Login = () => {
 
@@ -71,7 +72,7 @@ const Login = () => {
 
   return (
     <article className="login-card">
-        <button>volver</button>
+        <Volver/>
         <div className="login-button-container">
             <nav>
                 <button className="loginUser-button" onClick={handleClick} id='login'>Iniciar sesión</button>
