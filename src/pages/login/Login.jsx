@@ -2,6 +2,7 @@
 import './login.css'
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import LoginUser from "../../components/loginUser/LoginUser.jsx";
@@ -20,11 +21,21 @@ const Login = () => {
         notificacion: false
     });
     const [token, setToken] = useState('');
+    const [errorLogin, SetErrorLogin] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+    
+    const navigate = useNavigate();
+
+    function localStorageData(key, value) {
+        const dataToStorage = JSON.stringify(value);
+        localStorage.setItem(key, dataToStorage);
+    }
 
     const regUserApi = () => {
         return axios.post("http://localhost:3002/usuarios/register", usuario)
-        .then((res) => {
-            console.log(res);
+        .then((res1) => {
+            console.log(res1);
+            loginUserApi();
         })
         .catch((error) => {
             console.log(error);
@@ -33,16 +44,23 @@ const Login = () => {
 
     const loginUserApi = () => {
         return axios.post("http://localhost:3002/usuarios/login", usuario)
-        .then((res) => {
-            console.log(res);
-            setToken(res.data.data.token);
-            //console.log('Token :' ,res.data.data.token)
+        .then((res2) => {
+            console.log(res2);
+            if (res2.data.data.token) {
+                setToken(res2.data.data.token);
+                localStorageData('Token', res2.data.data.token);
+                res2.data.data.token && navigate('/home');
+            } else if (res2.data.data === null) {
+                res2.data.data = null && setErrorMessage(res2.data.data.message);
+                console.log(res2.data.data.status, res2.data.data.message)
+            }
         })
         .catch((error) => {
             console.log(error);
+            error && SetErrorLogin(true);
         })
     };
-    console.log('variable de estado token :', token);
+
     const handleClick = (ev) => {
         ev.preventDefault();
         if (ev.target.id === 'register') {
@@ -56,9 +74,6 @@ const Login = () => {
         } else if (ev.target.id === 'userlogin') {
             loginUserApi();
         }
-        console.log(ev.target.id);
-        /*ev.target.id === 'register' ? setTypeLogin('register') : setTypeLogin('login') && regUserApi();
-        ev.target.id === 'register' ? setButonText('Registrarse') : setButonText('Inicia sesión');*/
     };
 
     const handleInputs = (ev) => {
@@ -84,8 +99,8 @@ const Login = () => {
             {typeLogin === 'login' ? <LoginUser handleInputs={handleInputs} usuario={usuario}/> : <RegUser handleInputs={handleInputs} usuario={usuario}/>}
         </div>
         <button onClick={handleClick} id={`user${typeLogin}`}>{buttonText}</button>
+        {errorLogin === true && <p>{errorMessage}</p>}
     </article>
-
   );
 };
 

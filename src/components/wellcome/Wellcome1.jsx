@@ -10,10 +10,12 @@ const wellcome1 = ({ handleClick }) => {
         <img className='wellcome-img' src={cadena} alt='cadena'/>
       </div>
       <div className='text-wellcome-container'>
-        <h2>Prepárate para liberarte de tu equipaje</h2>
-        <p>Encuentra a tu guardian y disfruta a tu manera. Miles de usuarios ya están aprovechando las ventajas</p>
+        <h2 className='text-wellcome-container_letra'>Prepárate para liberarte de tu equipaje</h2>
+        <p className='text-wellcome-container_letra'>Encuentra a tu guardian y disfruta a tu manera. Miles de usuarios ya están aprovechando las ventajas</p>
       </div>
-      <button className="wellcome-button" onClick={handleClick} id='wellcome1'>Continuar</button>
+      <div className="wellcome-button">
+        <button className="wellcome-button_letra" onClick={handleClick} id='wellcome1'>Continuar</button>
+      </div>
     </article>
   );
 };
