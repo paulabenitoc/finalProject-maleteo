@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Volver from '../../components/Volver/Volver';
-import './Confirmacion.css'
 import GuardianNav from '../../components/GuardianNav/GuardianNav.jsx';
 import { Dialog } from 'primereact/dialog';
 import ChatBot from '../../components/ChatBot/ChatBot.jsx'
+import './Confirmacion.css'
 
 const Confirmacion = () => {
   const [reservas, setReservas] = useState([]);
@@ -36,7 +36,7 @@ const Confirmacion = () => {
       <div className='reservation'>
         <h1 className='peticion-reserva'>Petición de reserva</h1>
       </div>
-      <div className="user-profile">
+      <div className="user-profileConfir">
         {reservas.map((reserva, index) => (
           <div key={index}>
             <div className='box'>
@@ -49,10 +49,10 @@ const Confirmacion = () => {
             </div>
             <div className="user-buttons">
                 <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
-                <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)}>
+                <Dialog visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)}>
                 <ChatBot onSubmit={handleSubmit}></ChatBot>
                 </Dialog>
-              <a href=''>Declinar</a>
+              <a href='' className='delete-confirmacion'>Declinar</a>
             </div>
             </div>
             <hr />
