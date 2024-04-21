@@ -15,6 +15,7 @@ import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import Login from './pages/login/Login.jsx';
 import Thanks from './pages/Reserva/thanks.jsx';
 import MapaUbicacioncpy from './pages/Reserva/Mapaubicacioncpy.jsx';
+import Ficha from './pages/Reserva/Ficha.jsx';
 
 // cambio a nueva rama
 
@@ -43,6 +44,7 @@ function App() {
               <Route path='/calendario' element={<Calendario />} />
               <Route path='/mapaubicacion' element={<MapaUbicacion />} />
               <Route path='/mapaubicacioncpy' element={<MapaUbicacioncpy />} />
+              <Route path='/ficha' element={<Ficha />} />
               <Route path='/thanks' element={<Thanks />} />
             </Routes>
           </Router>

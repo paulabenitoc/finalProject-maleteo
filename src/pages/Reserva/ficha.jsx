@@ -25,9 +25,6 @@ export default function Ficha() {
         <>
             <div className="chars">
                 {characters.map((character, index) => (<div key={index}>
-                    <h2>{character.nombre}</h2>
-                    <img className='imagenguard' src={character.fotos} />
-                    <p>{character.ubicacion}</p>
                     <div>
                         <img className='imagenlugar' src={character.fotosLugar[0]} />
                         <img className='imagenlugar' src={character.fotosLugar[1]} />
@@ -36,14 +33,18 @@ export default function Ficha() {
                         <img className='imagenlugar' src={character.fotosLugar[4]} />
                         <img className='imagenlugar' src={character.fotosLugar[5]} />
                     </div>
+                    <h2>{character.nombre}</h2>
+                    <img className='imagenguard' src={character.fotos} />
+                    <p>{character.ubicacion}</p>
+
                 </div>))}
 
             </div>
 
             <div>
-                <p>imagen</p>
-                <p>titulo</p>
-                <p>ubicacion, cuidad</p>
+                <h2>El hall de Marta</h2>
+                <p>Tetuan,Madrid</p>
+                <p>Guardiana,Marta</p>
                 <p>estrellitas</p>
                 <p>imagen</p>
                 <p>logo</p>
