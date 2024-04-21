@@ -1,11 +1,11 @@
 //import React from 'react';
 import { useEffect, useState } from 'react';
 
-import './presentacion.css';
-
 import Preloader from '../../components/preloader/Preloader.jsx';
 import Wellcome1 from '../../components/wellcome/Wellcome1.jsx';
 import Wellcome2 from '../../components/wellcome/Wellcome2.jsx';
+
+import './presentacion.css';
 
 const Presentacion = () => {
 

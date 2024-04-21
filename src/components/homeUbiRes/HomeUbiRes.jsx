@@ -62,6 +62,11 @@ const HomeUbiRes = () => {
 
     });
 
+    const goToMapaUbi = () => {
+      //boton condicional
+      navigate('/mapaubicacion');
+    }
+
     return (
       <>
       <div className='pd'>
@@ -91,7 +96,7 @@ const HomeUbiRes = () => {
           <input className='input-buscador' onClick={() => {goToCheck()}} ref={numPiezass} type="text" placeholder='Nº de Piezas' />
         </div>
         
-        <button className='buscar'>Buscar</button>
+        <button className='buscar' onClick={() => goToMapaUbi()}>Buscar</button>
       </div>
       {/*<div className="datos">
         <div className="flex-auto">
