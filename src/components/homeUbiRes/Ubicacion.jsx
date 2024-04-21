@@ -1,10 +1,9 @@
-import { useState, useRef, createContext, useContext, useEffect } from 'react';
-import { useSpring, animated, config } from 'react-spring';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {useState, useRef, createContext, useContext, useEffect} from 'react';
+import {useSpring, animated, config} from 'react-spring';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {NavLink} from 'react-router-dom';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import { HomeUbiResContext } from './HomeUbiResContext';
-//import useMiContexto  from './HomeUbiResContext';
+import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
+import {HomeUbiResContext} from './HomeUbiResContext';
 import mapboxgl from 'mapbox-gl';
 import axios from 'axios';
 import aspa from '../../../public/images/aspa.png';
@@ -17,6 +16,7 @@ import './HomeUbiRes.css';
 
 const Ubicacion = () => {
   //const [ciudad, setCiudad] = useState('');
+  const {setMarkerUbi} = useContext(HomeUbiResContext);
   const {ciudad} = useContext(HomeUbiResContext);
   const {setCiudad} = useContext(HomeUbiResContext);
   const [mapa, setMapa] = useState(false);
@@ -75,6 +75,10 @@ const Ubicacion = () => {
     );
   }
 
+  const miLocation = () => {
+    localStorage.setItem('miUbi', inputCiudad.current.value);
+  }
+
   const borrar = () => {
     inputCiudad.current.value = '';
   }
@@ -125,7 +129,7 @@ const Ubicacion = () => {
       <hr className='divisor' />
     </div>      
     
-    <NavLink to="/reserva/ubicaciones" onClick={() => {setCiudad(inputCiudad.current.value)}} className='next'>
+    <NavLink to="/reserva/ubicaciones" onClick={() => {miLocation()}} className='next'>
       <img className='btn-next' src={imgBtn} alt="" />
     </NavLink>
     

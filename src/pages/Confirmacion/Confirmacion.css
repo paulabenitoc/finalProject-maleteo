@@ -1,31 +1,52 @@
-.reservation{
-    margin-left: 25px;
-    padding-top: 10px;
+.box {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-bottom: 0.5px solid #000;
+        padding-right: 0px;
+            margin-right: 15px;
+            margin-left: 0px;
+            padding-left: 0px;
+            padding-top: 10px;
+}
+
+.confirmacion-page{
+    margin-left: 15px;
+}
+
+.reservation {
     font-weight: bold;
 }
 
-.user-profile{
+.peticion-reserva{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.user-profile {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 20px;
+    padding: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.user-info{
+.user-info {
     display: flex;
     flex-direction: column;
-    margin-right: 60px;
+    margin-right: 8%;
 }
 
-.user-info h4, .user-info p {
+.user-info h4,
+.user-info p {
     margin: 0;
 }
 
-.user-info p{
+.user-info p {
     color: #666666;
 }
 
-.user-buttons{
+.user-buttons {
     display: flex;
     width: 44px;
     height: 30px;
@@ -33,13 +54,14 @@
     align-items: center;
 }
 
-.user-buttons a{
+.user-buttons a {
     text-decoration: none;
     color: #0095BE;
 }
 
 .user-buttons button {
-    margin-bottom: 15px;
+    font-size: 13px;
+    margin-bottom: 10px;
     color: white;
     background-color: #F68F24;
     border-radius: 10px;
@@ -48,9 +70,15 @@
 }
 
 
-.user-img{
-    height: 20%;
-    width: 20%;
+.user-img2 {
+    padding: 3%;
+    width: 15%;
     border-radius: 20px;
-    margin-right: 20px;
+    margin-left: 5px;
 }
+
+.text_inf {
+    font-size: 10px;
+}
+
+

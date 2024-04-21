@@ -8,6 +8,76 @@ body {
   padding: 0px;
   margin: 0px;
 }
+
+*{
+  box-sizing: inherit; 
+}
+.input-selectores-d .p-inputtext{
+  width:100px;
+  padding:10px;
+  border-left:5px solid #ff9966;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.input-selectores-r .p-inputtext{
+  width:100px;
+  padding:10px;
+  border-left:5px solid #0095BE;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.w-full{
+  background-color: rgba(251, 251, 251, 1);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.selector{
+  margin-right: 10px;
+}
+.selecMaletas{
+  padding: 20px;
+}
+.p-dropdown-item{
+  padding:10px;
+}
+.selectores{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.flecha-atras{
+  margin-left: 13.5pt;
+}
+input.p-inputtext{
+  background-color:rgba(251, 251, 251, 1); 
+  
+}
+.p-datepicker table td > span.p-highlight {
+  background-color: #ff9966;
+  color:white;
+}
+.calendarios{
+  padding: 50px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 80px; /* Espacio entre las celdas */ 
+}
+
+.datos{
+  display: flex;
+  background-color:rgba(251, 251, 251, 1);
+  padding-top: 10pt;
+  padding-left: 10pt;
+  padding-bottom: 10pt;
+  border-radius: 3pt;
+}
+.container-datos{
+  padding-left: 13pt;
+  padding-right: 16pt;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  gap: 10px; /* Espacio entre las celdas */  
+}
 .miUbi{
   background-color: white;
   transition:background-color 0.2s;
@@ -76,6 +146,9 @@ body {
   font-size: 30px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.input-a{
+  flex-grow:1;
 }
 
 .buscador{
@@ -170,6 +243,7 @@ font-size: 20px;
   color: rgba(92, 92, 92, 0.5); /* Puedes ajustar el color según tus preferencias */
   font-size: 15pt;
   line-height: 29pt;
+  flex-grow: 1;
 }
 .input-buscador::placeholder {
   color: rgba(171, 171, 171, 0.5); /* Puedes ajustar el color según tus preferencias */

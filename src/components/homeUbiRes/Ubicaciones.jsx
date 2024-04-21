@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSpring, animated, config } from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {NavLink} from 'react-router-dom';
@@ -11,15 +12,21 @@ import brujula from '../../../public/images/brujula.png';
 import reloj from '../../../public/images/reloj.png';
 import equis from '../../../public/images/equis.png';
 import imgBtn from '../../../public/images/img-btn.png';
+import axios from 'axios';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './HomeUbiRes.css';
 import { HomeUbiResContext } from './HomeUbiResContext';
 
 const Ubicaciones = () => {
-
+  const navigate = useNavigate();
   const {ciudad} = useContext(HomeUbiResContext);
   const {setCiudad} = useContext(HomeUbiResContext); 
+  const {idMarker} = useContext(HomeUbiResContext);
+  const {setMarker} = useContext(HomeUbiResContext); 
+  const {markerUbi} = useContext(HomeUbiResContext);
+  const {setMarkerUbi} = useContext(HomeUbiResContext); 
   const geocoderContainer = useRef(null);
+  const inputCiudad = useRef('');
   const mapContainer = useRef(null);
   const [mapa, setMapa] = useState(true);
   const [map, setMap] = useState(null); // Estado para mantener el objeto map
@@ -30,9 +37,10 @@ const Ubicaciones = () => {
     to: { background: mapa ? finalGradient : initialGradient },
     config: { duration: 300 },
   });
+
   const mover = (a) => {
     if (mapInstance) {
-      console.log(a.result.center, map);
+      console.log('mapa existe', a);
       mapInstance.flyTo({
         center: a.result.center,
         essential:true,
@@ -40,35 +48,81 @@ const Ubicaciones = () => {
         duration: 2000
       });
     }else{
-      console.log('el mapa no existe', map);
+      console.log('el mapa no existe');
     }
   };
   let mapInstance = '';
-  const iniciaMapa = () => {
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZmxvb3dlZW4iLCJhIjoiY2x2NGF3OXY0MDY3dzJxbW5tNG1jeDVwZiJ9.NDhhbLKm9mhhzRbaFVdSDA';
-  mapInstance = new mapboxgl.Map({
-    container: mapContainer.current,
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-3.7038, 40.4168],
-    zoom: 15,
-  });
- 
 
+  const iniciaMapa = async() => {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZmxvb3dlZW4iLCJhIjoiY2x2NGF3OXY0MDY3dzJxbW5tNG1jeDVwZiJ9.NDhhbLKm9mhhzRbaFVdSDA';
+
+    mapInstance = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: markerUbi ? markerUbi : [-3.7038, 40.4168],
+      zoom: 15,
+    });
+
+    const {data} = await axios('http://localhost:3002/ubicacion');
+
+    data.data.forEach((info) => {
+      let lat = info.latitud;
+      let lon = info.longitud;
+      let marker = '';
+      if(info._id == idMarker){
+        marker = new mapboxgl.Marker({
+          color: "#419bf9"
+        })
+        .setLngLat([lon, lat])
+        .addTo(mapInstance);        
+      }else{
+        marker = new mapboxgl.Marker({
+          color: "#F68F24"
+        })
+        .setLngLat([lon, lat])
+        .addTo(mapInstance);         
+      }
+
+      /*.setPopup(new mapboxgl.Popup().setHTML(`
+        ${info.direccion}
+      `));*/
+
+      const markerData = {};
+      markerData[marker._elementID] = {
+        info: info
+      };
+
+      marker.getElement().addEventListener('click', () => {
+        const markerInfo = markerData[marker._elementID];
+        console.log(markerInfo.info.direccion);
+        setCiudad(markerInfo.info.direccion);
+        console.log(markerInfo.info._id);
+        setMarker(markerInfo.info._id);
+        setMarkerUbi([markerInfo.info.longitud, markerInfo.info.latitud]);
+        navigate('/reserva');
+      });
+    });
+
+
+ 
     const existingGeocoder = document.querySelector('.mapboxgl-ctrl-geocoder');
+
     const geocoder = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       types: 'country,region,place,postcode,locality,neighborhood',
       marker: { color: 'orange' },
       mapboxgl: mapboxgl
     });
+
     if(!existingGeocoder){
       geocoder.addTo(geocoderContainer.current);
     }
 
     geocoder.on('result', (e) => {
-      console.log('geocoder ejecutado',e);
+      //console.log('geocoder ejecutado',e);
       mover(e);   
     });
+
     geocoder.on('mapboxgl-geocoder input', function () {
       geocoder.setInput(ciudad);
     });
@@ -77,29 +131,25 @@ const Ubicaciones = () => {
     document.documentElement.classList.add('hide-scrollbar');
 
     mapInstance.on('load', () => {
-      console.log('mapa cargado');
-      console.log(geocoder);
-      sugiere();
+      //console.log('mapa cargado');
+      //console.log(geocoder);
       setMap(mapInstance);
+      sugiere();
+      
   });
   }
 
   const sugiere = () => {
     const input = geocoderContainer.current.querySelector('input.mapboxgl-ctrl-geocoder--input');
     input.value = ciudad;
-    input.addEventListener('click', () => {
-      input.dispatchEvent(new Event('input', { bubbles: true }));
-    });
   }
 
-  // Establecer el valor predeterminado
+  const goToReserva = async() => {
+    navigate('/reserva');
+  }
+
   useEffect(() => {
     iniciaMapa();
-      // Obtener el input del geocodificador
-      const input = geocoderContainer.current.querySelector('input.mapboxgl-ctrl-geocoder--input');
-      /*input.addEventListener('click', () => {
-        geocoder.query(input.value);
-      }); */
   }, []);
 
 
@@ -124,7 +174,7 @@ const Ubicaciones = () => {
                 
             </div>
        </animated.div>
-        <div className='next'>
+        <div className='next' onClick={() => {goToReserva()}}>
             <img className='btn-next' src={imgBtn} alt="" />
         </div>
     </div>
