@@ -1,0 +1,19 @@
+.presentation {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 206, 50);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(min-width:960px) {
+    body {
+        width: 100vw;
+    }
+
+    .presentation {
+        background-color: tomato;
+    }
+}

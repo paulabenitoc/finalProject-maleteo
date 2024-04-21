@@ -22,6 +22,7 @@ const Login = () => {
     });
     const [token, setToken] = useState('');
     const [errorLogin, SetErrorLogin] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
     
     const navigate = useNavigate();
 
@@ -45,9 +46,14 @@ const Login = () => {
         return axios.post("http://localhost:3002/usuarios/login", usuario)
         .then((res2) => {
             console.log(res2);
-            setToken(res2.data.data.token);
-            localStorageData('Token', res2.data.data.token);
-            res2.data.data.token && navigate('/home');
+            if (res2.data.data.token) {
+                setToken(res2.data.data.token);
+                localStorageData('Token', res2.data.data.token);
+                res2.data.data.token && navigate('/home');
+            } else if (res2.data.data === null) {
+                res2.data.data = null && setErrorMessage(res2.data.data.message);
+                console.log(res2.data.data.status, res2.data.data.message)
+            }
         })
         .catch((error) => {
             console.log(error);
@@ -93,7 +99,7 @@ const Login = () => {
             {typeLogin === 'login' ? <LoginUser handleInputs={handleInputs} usuario={usuario}/> : <RegUser handleInputs={handleInputs} usuario={usuario}/>}
         </div>
         <button onClick={handleClick} id={`user${typeLogin}`}>{buttonText}</button>
-        {errorLogin === true && <p>Usuario o contraseña incorrectos</p>}
+        {errorLogin === true && <p>{errorMessage}</p>}
     </article>
   );
 };
