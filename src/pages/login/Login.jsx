@@ -49,7 +49,7 @@ const Login = () => {
             if (res2.data.data.token) {
                 setToken(res2.data.data.token);
                 localStorageData('Token', res2.data.data.token);
-                res2.data.data.token && navigate('/home');
+                res2.data.data.token && navigate('/reserva');
             } else if (res2.data.data === null) {
                 res2.data.data = null && setErrorMessage(res2.data.data.message);
                 console.log(res2.data.data.status, res2.data.data.message)
