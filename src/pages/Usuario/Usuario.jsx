@@ -48,7 +48,7 @@ function Usuario() {
             <p className='userRegister-anounce'>Puedes ganar 400€ de media al mes</p>
           </button>
           <Dialog visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)} className='dialog'>
-            <Guardian onSubmit={handleSubmit}></Guardian>
+            <Guardian onSubmit={handleSubmit} style="100wv"></Guardian>
           </Dialog>
         </div>
         <div className='user-userOptions'>
