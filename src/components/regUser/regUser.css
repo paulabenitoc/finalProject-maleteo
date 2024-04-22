@@ -1,0 +1,45 @@
+.register-inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.reg_inputs {
+    height: 35px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid;
+    border-color: grey;
+    font-size: 20px;
+}
+
+.reg_txt {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reg_txt1 {
+    margin-top: 10%;
+    margin-left: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.check_area{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: flex-start;
+    padding-top: 10%;
+}
+
+.check{
+    margin-right: 2%;
+    width: 20px;
+}
+
+.check_text{
+    font-weight: bold;
+    font-size: 14px;
+}

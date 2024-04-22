@@ -58,6 +58,7 @@ function App() {
               <Route path='/mapaubicacioncpy' element={<MapaUbicacioncpy />} />
               <Route path='/ficha' element={<Ficha />} />
               <Route path='/thanks' element={<Thanks />} />
+              <Route path='*' element='Error 404. Página no encontrada'/>
             </Routes>
           </Router>
         </HomeUbiResContext.Provider>
