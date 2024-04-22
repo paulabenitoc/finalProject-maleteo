@@ -33,12 +33,13 @@ function App() {
   const [numPiezas, setNumPiezas] = useState(null);
   const [tarifa, setTarifa] = useState(null);
   const [total, setTotal] = useState(null);
+  const [email, setEmail] = useState(null);
   return (
     <>
       <PrimeReactProvider>
         <HomeUbiResContext.Provider value={{
           ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi, dias, setDias,
-          horas, setHoras, tarifa, setTarifa, total, setTotal, numPiezas, setNumPiezas, dDeposito, setdDeposito, dRetirada, setdRetirada
+          horas, setHoras, tarifa, setTarifa, total, setTotal, numPiezas, setNumPiezas, dDeposito, setdDeposito, dRetirada, setdRetirada, email, setEmail
         }}>
 
           <Router>
