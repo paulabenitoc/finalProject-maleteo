@@ -6,11 +6,8 @@ import { faX } from '@fortawesome/free-solid-svg-icons';
 export default function VolverHome() {
     return (
         <>
-            <div className='Back'>
-                <span className="backhome">
-                    <Link to="/calendario"><FontAwesomeIcon icon={faX} /></Link>
-                </span>
-
+            <div className='Back-thx'>
+                <Link to="/calendario"><FontAwesomeIcon icon={faX} /></Link>
             </div>
 
         </>

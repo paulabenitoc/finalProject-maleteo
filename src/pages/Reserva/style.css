@@ -1,5 +1,10 @@
 /* ESTOS ES EL CSS DE LA PAGINA MAPAUBICACION */
 
+.navi {
+    position: absolute;
+    bottom: 0;
+}
+
 .bar {
     position: absolute;
     width: 80%;
@@ -10,27 +15,48 @@
 
 .chars {
     display: flex;
-    gap: 15px;
     position: absolute;
     width: 100%;
     height: 185px;
-    bottom: 0;
+    bottom: 70px;
     border-radius: 10px;
-
-}
-
-.navi {
-    position: absolute;
-    bottom: 0;
-}
-
-.div-button {
-    display: flex;
+    align-items: center;
 }
 
 .card {
     display: flex;
-    background-color: aliceblue;
+    background-color: white;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.card_d {
+    display: flex;
+    width: 90%;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 170px;
+    flex-direction: row;
+}
+
+.boton {
+    display: flex;
+    height: 100%;
+    width: 70%;
+}
+
+.div-button {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.forward {
+    width: 30%;
 }
 
 .imagenlugar {
@@ -38,14 +64,315 @@
     height: 150px;
 }
 
+.infor {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+}
+
 .imagenguard {
     width: 70px;
     height: 70px;
-    border-top: solid 1px aqua;
 }
 
-.mapboxgl-map {
+.letra-mapa {
+    font-size: 10px;
+}
+
+/* .mapboxgl-map {
     position: relative;
+} */
+
+.swiper-pagination-fraction {
+    bottom: none;
+}
+
+
+/*ESTO ES EL CSS DE PAGINA MAPAUBICACIONCPY*/
+.Back {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-back {
+    margin-left: 10px;
+    width: 100%;
+    height: 150px;
+}
+
+.chars-detalle {
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    bottom: 55px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    border-color: white;
+}
+
+.iconito {
+    position: absolute;
+    bottom: 390px;
+}
+
+.chars-mapa {
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    bottom: 207px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.chars-mapa1 {
+    gap: 15px;
+    align-items: center;
+    width: 90%;
+    bottom: 15px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.usuario-mapa {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.usuario_i {
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.imagen-mapa {
+    border-radius: 14px;
+    width: 80px;
+}
+
+.imagen-mapa1 {
+    margin-left: 10px;
+    width: 100%;
+    height: 150px;
+}
+
+/* ESTO ES EL CSS DE PAGINA FICHA */
+
+
+.contenedor-ficha {
+    display: flex;
+    height: 860px;
+    flex-wrap: wrap;
+}
+
+/* las img de lugares */
+.chars_ficha {
+    display: flex;
+    width: 100%;
+}
+
+.imagenlugar_ficha {
+    width: 100vw;
+    height: 30vh;
+}
+
+/* aqui acaban las img de lugar */
+.imagenguard_ficha {
+    width: 70px;
+    height: 70px;
+}
+
+.chars_usuario {
+    display: flex;
+    width: 414px;
+    height: 16%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imagen1 {
+    border-radius: 10px;
+    width: 90px;
+}
+
+.imagenValoracion {
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.chars_usuario_i {
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.chars_usuario_d {
+    margin: 0;
+}
+
+.chars_usuario_p {
+    font-size: 10px;
+}
+
+.chars_usuario_h {
+    font-size: 20px;
+}
+
+.rapido {
+    display: flex;
+    width: 50%;
+    margin-left: 40px;
+    justify-content: flex-start;
+}
+
+.encuesta {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.encuesta_div {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.encuesta_texto {
+    width: 70%;
+}
+
+.encuesta_img {
+    width: 60px;
+}
+
+.encuesta_95 {
+    font-size: 33px;
+    color: rgb(255, 155, 51);
+}
+
+.encuesta_h {
+    font-size: 18px;
+}
+
+.encuesta_p {
+    font-size: 14px;
+}
+
+.texto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.texto_1 {
+    border-top: 1px solid black;
+    width: 80%;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+    padding-bottom: 20px;
+}
+
+.button_1 {
+    width: 60%;
+    font-size: 20px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(255, 155, 51);
+    border-radius: 5px;
+
+}
+
+/*PASARELA DE RESERVAS*/
+
+
+.contenedor-pasarela {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contenedor-titulo {
+    margin: 30px;
+    margin-bottom: 5px;
+}
+
+.contenedor-titulo_s {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.titulo-p {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-tp {
+    width: 32%;
+}
+
+.contenedor-precios {
+    height: 70%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.precio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.texto-p {
+    width: 32%;
+}
+
+.texto-p_1 {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.line {
+    height: 1px;
+    background-color: black;
+
+}
+
+.boton-pasarela {
+    display: flex;
 }
 
 /* ESTO ES EL CSS DE PAGINA THANKS */
@@ -54,6 +381,12 @@
     justify-content: flex-end;
     margin-right: 25px;
     margin-top: 20px;
+}
+
+.Back-thx {
+    text-align: end;
+    margin-right: 40px;
+    margin-top: 25px;
 }
 
 .res {

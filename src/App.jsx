@@ -18,6 +18,7 @@ import Thanks from './pages/Reserva/thanks.jsx';
 import MapaUbicacioncpy from './pages/Reserva/mapaubicacioncpy.jsx';
 import Ficha from './pages/Reserva/ficha.jsx';
 import Tarifas from './pages/home/home.jsx';
+import PasarelaReserva from './pages/Reserva/pasarelaReserva.jsx';
 
 // cambio a nueva rama
 
@@ -57,6 +58,7 @@ function App() {
               <Route path='/mapaubicacion' element={<MapaUbicacion />} />
               <Route path='/mapaubicacioncpy' element={<MapaUbicacioncpy />} />
               <Route path='/ficha' element={<Ficha />} />
+              <Route path='/pasarelareserva' element={<PasarelaReserva />} />
               <Route path='/thanks' element={<Thanks />} />
             </Routes>
           </Router>

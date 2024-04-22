@@ -1,39 +1,59 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import Nav from '../../components/nav/nav';
+import Volver from '../../components/Volver/Volver';
 
-export default function pasarelaReserva() {
+export default function PasarelaReserva() {
     return (
         <>
-            <h1>Detalles de tu reserva</h1>
-            <div>
-                <p>Depósito</p>
-                <p>fecha</p>
-                <p>Retirada</p>
-                <p>fecha</p>
-                <p>Equipaje</p>
-                <p>n_equipaje</p>
-            </div>
-            <div>
-                <div>
-                    <p>Primeras 24 hora</p>
-                    <p>6,00 x2 equipajes</p>
-                    <p>precio€</p>
+            <Volver />
+            <section className='contenedor-pasarela'>
+                <div className='contenedor-titulo'>
+                    <h1> <strong>Detalles de tu reserva </strong></h1>
+                    <section className='contenedor-titulo_s'>
+                        <div className='titulo-p'>
+                            <p className='texto-tp'><strong>Llegada</strong></p>
+                            <p className='texto-tp'>20 de Julio</p>
+                        </div>
+                        <div className='titulo-p'>
+                            <p className='texto-tp'><strong>Recogida</strong></p>
+                            <p className='texto-tp'>30 de Julio</p>
+                        </div>
+                        <div className='titulo-p'>
+                            <p className='texto-tp'><strong>Equipaje</strong></p>
+                            <p className='texto-tp'>2 Equipaje</p>
+                        </div>
+                    </section>
                 </div>
-                <div>
-                    <p>Gastos de gestión</p>
-                    <p>precio€</p>
+                <hr className='line'></hr>
+
+                <div className='contenedor-precios'>
+                    <div className='precio'>
+                        <p className='texto-p'>Primeras 24 hora 6,00 x2 equipajes</p>
+                        <p className='texto-p_1'>10 €</p>
+                    </div>
+                    <div className='precio'>
+                        <p className='texto-p'>Gastos de gestión</p>
+                        <p className='texto-p_1'>2 €</p>
+                    </div>
+                    <div className='precio'>
+                        <p className='texto-p'>Servicio asegurado hasta 1000€</p>
+                        <p className='texto-p_1'>Gratis</p>
+                    </div>
+                    <div className='precio'>
+                        <p className='texto-p'>Total</p>
+                        <p className='texto-p_1'><strong>12 €</strong></p>
+                    </div>
+
                 </div>
-                <div>
-                    <p>Servicio asegurado hasta 1000€</p>
-                    <p>Gratis</p>
+
+                <div className='boton-pasarela'>
+                    <Link to='/thanks' className='button'>
+                        <button className='button_1'>Reservar</button>
+                    </Link>
                 </div>
-                <div>
-                    <p>Total</p>
-                    <p>precio€</p>
-                </div>
-            </div>
-            <div>
-                <p>boton Reserva</p>
-            </div>
+            </section>
+            <Nav className='navi'></Nav>
         </>
 
     )
