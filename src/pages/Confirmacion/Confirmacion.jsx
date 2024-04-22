@@ -43,12 +43,12 @@ const Confirmacion = () => {
             <img src={reserva.img} className="user-img2" />
             <div className="user-info">
             
-              <h4>{ reserva.nombre }</h4>
+              <h4 className='user-info-name'>{ reserva.nombre }</h4>
               <p className='text_inf'>Deposito - {reserva.deposito}</p>
               <p className='text_inf'>Recogida -  {reserva.retirada}</p>
             </div>
             <div className="user-buttons">
-                <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
+                <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)} className='user-acept'>Aceptar</button>
                 <Dialog visible={visible} style={{ width: '100vw' }} onHide={() => setVisible(false)}>
                 <ChatBot onSubmit={handleSubmit}></ChatBot>
                 </Dialog>

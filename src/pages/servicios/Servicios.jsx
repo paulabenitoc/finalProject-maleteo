@@ -38,9 +38,9 @@ function Servicios() {
           </div>
         ))}
       </div>
-      <h1>Añade otro espacio</h1>
+      <h1 className='servicios-otroEspacio'>Añade otro espacio</h1>
       <div className='agregar'>
-        <a href='#'><button>&#43;</button></a>
+        <a href='#'><button className='servicios-button-siguiente'>&#43;</button></a>
       </div>
       <hr />
       <Nav/>
