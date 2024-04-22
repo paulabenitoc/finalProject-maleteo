@@ -121,7 +121,7 @@ const HomeUbiRes = () => {
         </div>
         
         <button className='buscar' onClick={() => goToMapaUbi()}>Buscar</button>
-        <button className='buscar' onClick={() => getUsuario()}>encontrar usuario</button>
+        {/*<button className='buscar' onClick={() => getUsuario()}>encontrar usuario</button> */}
       </div>
       {/*<div className="datos">
         <div className="flex-auto">
