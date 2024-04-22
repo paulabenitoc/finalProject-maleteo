@@ -13,15 +13,15 @@ export default function PasarelaReserva() {
                     <section className='contenedor-titulo_s'>
                         <div className='titulo-p'>
                             <p className='texto-tp'><strong>Llegada</strong></p>
-                            <p className='texto-tp'>fecha</p>
+                            <p className='texto-tp'>20 de Julio</p>
                         </div>
                         <div className='titulo-p'>
                             <p className='texto-tp'><strong>Recogida</strong></p>
-                            <p className='texto-tp'>fecha</p>
+                            <p className='texto-tp'>30 de Julio</p>
                         </div>
                         <div className='titulo-p'>
                             <p className='texto-tp'><strong>Equipaje</strong></p>
-                            <p className='texto-tp'>n_equipaje</p>
+                            <p className='texto-tp'>2 Equipaje</p>
                         </div>
                     </section>
                 </div>
@@ -30,11 +30,11 @@ export default function PasarelaReserva() {
                 <div className='contenedor-precios'>
                     <div className='precio'>
                         <p className='texto-p'>Primeras 24 hora 6,00 x2 equipajes</p>
-                        <p className='texto-p_1'>precio€</p>
+                        <p className='texto-p_1'>10 €</p>
                     </div>
                     <div className='precio'>
                         <p className='texto-p'>Gastos de gestión</p>
-                        <p className='texto-p_1'>precio€</p>
+                        <p className='texto-p_1'>2 €</p>
                     </div>
                     <div className='precio'>
                         <p className='texto-p'>Servicio asegurado hasta 1000€</p>
@@ -42,7 +42,7 @@ export default function PasarelaReserva() {
                     </div>
                     <div className='precio'>
                         <p className='texto-p'>Total</p>
-                        <p className='texto-p_1'><strong>precio€</strong></p>
+                        <p className='texto-p_1'><strong>12 €</strong></p>
                     </div>
 
                 </div>
