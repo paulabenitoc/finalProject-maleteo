@@ -19,6 +19,8 @@ import MapaUbicacioncpy from './pages/Reserva/mapaubicacioncpy.jsx';
 import Ficha from './pages/Reserva/ficha.jsx';
 import Tarifas from './pages/home/home.jsx';
 import PasarelaReserva from './pages/Reserva/pasarelaReserva.jsx';
+import Espacio from './pages/servicios/Espacio.jsx';
+import Servicios from './pages/servicios/Servicios.jsx'
 
 // cambio a nueva rama
 
