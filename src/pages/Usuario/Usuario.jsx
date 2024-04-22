@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import './Usuario.css';
-import './DialogStyles.css';
 import { Dialog } from 'primereact/dialog';
 import Guardian from './Guardian/Guardian';
 import Nav from '../../components/nav/nav';
+import { useNavigate, } from 'react-router-dom';
+import './Usuario.css';
+import './DialogStyles.css';
 
 function Usuario() {
+  const navigate = useNavigate();
   const [guardianes, setGuardianes] = useState([]);
   const [visible, setVisible] = useState(false);
+  const logOutSubmit = () => {
+    localStorage.removeItem('Token');
+    navigate('/login');
+  }
+  
 
   const handleSubmit = (data) => {
     console.log("Datos enviados:", data);
@@ -33,44 +40,46 @@ function Usuario() {
   return (
     <div>
       {guardianes.length > 0 && (
-        <div className="user">
+        <div className="user-profile">
           <span>
-            <h4>{guardianes[0].nombre}</h4>
-            <p>Puedes ver y editar tu perfil</p>
+            <h4 className='user-profileName'>{guardianes[0].nombre}</h4>
+            <p className='user-profileEdit'>Puedes ver y editar tu perfil</p>
           </span>
           <img src={guardianes[0].fotos} alt={guardianes[0].nombre} className="user-img" />
         </div>
       )}
-      <div className='menu-options'>
-        <div className='user-options'>
-          <button className='register-button' label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>
-            <h3>Conviértete en guardián</h3>
-            <p>Puedes ganar 400€ de media al mes</p>
+      <div className='menu-userOptions'>
+        <div className='user-userOptions'>
+          <button className='userRegister-button' label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>
+            <h3 className='userRegister-guardian'>Conviértete en guardián</h3>
+            <p className='userRegister-anounce'>Puedes ganar 400€ de media al mes</p>
           </button>
-          <Dialog visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)} className='dialog'>
-            <Guardian onSubmit={handleSubmit}></Guardian>
+          <Dialog visible={visible} style={{ width: '100vw' }} onHide={() => setVisible(false)} className='dialog'>
+            <Guardian onSubmit={handleSubmit} style="100wv"></Guardian>
           </Dialog>
         </div>
-        <div className='user-options'>
+        <div className='user-userOptions'>
              <h3>Invita a tus amigos</h3>
-             <p>Y podrás ganar descuentos para ti</p>
+             <p className='userRegister-anounce'>Y podrás ganar descuentos para ti</p>
          </div>
         
-         <div className='user-options'>
+         <div className='user-userOptions'>
              <h3>Créditos y decuentos</h3>
          </div>
         
-         <div className='user-options'>
+         <div className='user-userOptions'>
              <h3>Publica tu anuncio o experiencia</h3>
          </div>
         
-         <div className='user-options'>
+         <div className='user-userOptions'>
              <h3>Configuración</h3>
          </div>
         
-         <div className='user-options'>
+         <div className='user-userOptions'>
              <h3>Ayuda</h3>
-         </div>
+        </div>
+        
+        <button onClick={()=> logOutSubmit()} className='logOut-button-usuario'>Log Out</button>
       </div>
       <Nav></Nav>
     </div>

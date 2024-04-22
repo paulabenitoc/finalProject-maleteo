@@ -13,35 +13,31 @@ export default function Guardian({ onSubmit }) {
     };
 
     return (
-        <div className='guardian'>
-            <div className="config">
-                <h3>Configura tu espacio en muy pocos pasos</h3>
+        <div className='guardian-spaceForm'>
+            <div className="config-spaceForm">
+                <h3 className="config-spaceForm-title">Configura tu espacio en muy pocos pasos</h3>
             </div>
             <form onSubmit={handleSubmit(handleValidSubmit)} className='config-space'>
-                <fieldset>
-                    <div className='description'>
-                        <legend>Describe tu espacio</legend>
-                        <button type="submit" disabled={!isValid}>Continuar</button>
+                <fieldset className='formGuardian'>
+                    <div className='description-formGuardian'>
+                        <legend className='title-formGuardian'>Describe tu espacio</legend>
+                        <button type="submit" disabled={!isValid} className='button-formGuardian' onClick={() => window.location.href = 'http://localhost:5173/espacio'}>Continuar</button>
                     </div>
                     <label className='item-space'>
-                        Ubicación
-                        <input type="text" {...register("ubicacion")} />
+                        <input type="text" {...register("ubicacion")} placeholder="Ubicación" className='item-spaceHolder' />
                     </label>
                     <label className='item-space'>
-                        Fotos
-                        <input type="text" {...register("fotos")} />
+                        <input type="text" {...register("fotos")} placeholder="Fotos" className='item-spaceHolder' />
+
                     </label>
                     <label className='item-space'>
-                        Título
-                        <input type="text" {...register("descripcion")} />
+                        <input type="text" {...register("descripcion")} placeholder="Título" className='item-spaceHolder' />
                     </label>
                     <label className='item-space'>
-                        Disponibilidad
-                        <input type="text" {...register("disponibilidad")} />
+                        <input type="text" {...register("disponibilidad")} placeholder="Disponibilidad" className='item-spaceHolder' />
                     </label>
                     <label className='item-space'>
-                        Horario
-                        <input type="text" {...register("horario")} />
+                        <input type="text" {...register("horario")} placeholder="Horario" className='item-spaceHolder' />
                     </label>
                 </fieldset>
             </form>
