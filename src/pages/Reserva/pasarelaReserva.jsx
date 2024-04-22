@@ -1,9 +1,25 @@
-import React from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Nav from '../../components/nav/nav';
 import Volver from '../../components/Volver/Volver';
+import { HomeUbiResContext } from '../../components/homeUbiRes/HomeUbiResContext';
+import moment from 'moment';
+
+
 
 export default function PasarelaReserva() {
+    const { dDeposito } = useContext(HomeUbiResContext);
+    const { dRetirada } = useContext(HomeUbiResContext);
+    const [dias, setDias] = useState();
+    useEffect(() => {
+
+        const dia = moment(dRetirada).diff(moment(dDeposito), 'days');
+        console.log(dia);
+        setDias(dia);
+    }, [])
+
+
+
     return (
         <>
             <Volver />

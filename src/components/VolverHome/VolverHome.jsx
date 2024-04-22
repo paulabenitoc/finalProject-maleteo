@@ -7,7 +7,7 @@ export default function VolverHome() {
     return (
         <>
             <div className='Back-thx'>
-                <Link to="/calendario"><FontAwesomeIcon icon={faX} /></Link>
+                <Link to="/reserva"><FontAwesomeIcon icon={faX} /></Link>
             </div>
 
         </>
