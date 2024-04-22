@@ -18,6 +18,8 @@ import Thanks from './pages/Reserva/thanks.jsx';
 import MapaUbicacioncpy from './pages/Reserva/mapaubicacioncpy.jsx';
 import Ficha from './pages/Reserva/ficha.jsx';
 import Tarifas from './pages/home/home.jsx';
+import Espacio from './pages/servicios/Espacio.jsx';
+import Servicios from './pages/servicios/Servicios.jsx';
 
 // cambio a nueva rama
 
@@ -58,6 +60,8 @@ function App() {
               <Route path='/mapaubicacioncpy' element={<MapaUbicacioncpy />} />
               <Route path='/ficha' element={<Ficha />} />
               <Route path='/thanks' element={<Thanks />} />
+              <Route path='/espacio' element={<Espacio />} />
+              <Route path='/servicios' element={<Servicios />} />
             </Routes>
           </Router>
         </HomeUbiResContext.Provider>

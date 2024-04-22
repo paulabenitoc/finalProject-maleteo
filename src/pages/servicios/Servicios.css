@@ -1,0 +1,32 @@
+.img {
+    width: 50%;
+    border-radius: 5%;
+}
+
+.box_anuncios {
+    margin-left: 5%;
+}
+
+button {
+    border: none;
+    background-color: white;
+    font-size: 50px;
+}
+
+.caja_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 30px;
+}
+
+h1 {
+    margin-left: 5%;
+}
+
+.agregar {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+    padding-bottom: 20%;
+}
