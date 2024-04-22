@@ -7,8 +7,13 @@
     transition-property: background-color;
 }
 
-.p-component, .p-component * {
+/* .p-component, .p-component * {
     box-sizing: content-box;
+} */
+
+.p-dialog-header-icon{
+    z-index: 1;
+    color: black;
 }
 
 .p-dialog-header {
@@ -17,11 +22,13 @@
     background-color: transparent;
     font-size: 20px;
     position: absolute;
-    top: 20px;
+    top: 11px;
     right: 20px;
     position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
 }
-
 
 .dialog {
     width: 100%;
