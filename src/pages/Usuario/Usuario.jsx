@@ -47,7 +47,7 @@ function Usuario() {
             <h3 className='userRegister-guardian'>Conviértete en guardián</h3>
             <p className='userRegister-anounce'>Puedes ganar 400€ de media al mes</p>
           </button>
-          <Dialog visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)} className='dialog'>
+          <Dialog visible={visible} style={{ width: '100vw' }} onHide={() => setVisible(false)} className='dialog'>
             <Guardian onSubmit={handleSubmit} style="100wv"></Guardian>
           </Dialog>
         </div>
