@@ -14,7 +14,7 @@ export default function Slider({ characters }) {
 
     return (
         <>
-            <Swiper pagination={{ type: 'fraction', }} navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 
                 {characters.map((character, index) => (
 
