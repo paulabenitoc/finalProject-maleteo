@@ -1,15 +1,18 @@
 //import React from 'react'
 import "./login.css";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {HomeUbiResContext} from '../../components/homeUbiRes/HomeUbiResContext.jsx';
 import LoginUser from "../../components/loginUser/LoginUser.jsx";
 import RegUser from "../../components/regUser/RegUser.jsx";
 import Volver from "../../components/Volver/Volver.jsx";
 
 const Login = () => {
   const navigate = useNavigate();
+  const {email} = useContext(HomeUbiResContext);
+  const {setEmail} = useContext(HomeUbiResContext);
 
   const [typeLogin, setTypeLogin] = useState("login");
   const [buttonText, setButonText] = useState("Inicia sesión");
@@ -54,6 +57,7 @@ const Login = () => {
           SetErrorTypes({ errorMessage: "Contraseña incorrecta" });
         } else if (res2.data.data.token) {
           setToken(res2.data.data.token);
+          setEmail(usuario.email);
           localStorageData("Token", res2.data.data.token);
           res2.data.data.token && navigate("/reserva");
         }
