@@ -18,23 +18,25 @@ export default function Slider({ characters }) {
 
                 {characters.map((character, index) => (
 
-                    <div className='card' key={index}>
-                        <SwiperSlide>
-                            <div className='boton'>
-                                <Link to='/mapaubicacioncpy' className="div-button">
-                                    <button className="forward">
-                                        <img className='imagenlugar' src={character.fotoLugar} />
-                                    </button>
-                                </Link>
+                    <SwiperSlide key="index">
+                        <section className='card'>
+                            <div className='card_d' key={index}>
+                                <div className='boton'>
+                                    <Link to='/mapaubicacioncpy' className="div-button">
+                                        <button className="forward">
+                                            <img className='imagenlugar' src={character.fotoLugar} />
+                                        </button>
+                                    </Link>
+                                </div>
+                                <div className='infor'>
+                                    <h2>{character.nombre}</h2>
+                                    <img className='imagenguard' src={character.fotos} />
+                                    <p className='letra-mapa'>{character.ubicacion}</p>
+                                </div>
                             </div>
-                            <div className='infor'>
-                                <h2>{character.nombre}</h2>
-                                <img className='imagenguard' src={character.fotos} />
-                                <p>{character.ubicacion}</p>
-                            </div>
-                        </SwiperSlide>
-
-                    </div >))
+                        </section>
+                    </SwiperSlide>
+                ))
                 }
             </Swiper>
 

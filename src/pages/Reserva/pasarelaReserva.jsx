@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function pasarelaReserva() {
+export default function PasarelaReserva() {
     return (
         <>
             <h1>Detalles de tu reserva</h1>
