@@ -9,6 +9,7 @@ import moment from 'moment';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import './HomeUbiRes.css';
+import Nav from '../nav/nav';
 
 const HomeUbiRes = () => {
     const navigate = useNavigate();
@@ -120,7 +121,9 @@ const HomeUbiRes = () => {
           <input className='input-buscador' onClick={() => {goToCheck()}} ref={numPiezass} type="text" placeholder='Nº de Piezas' />
         </div>
         
-        <button className='buscar' onClick={() => goToMapaUbi()}>Buscar</button>
+          <button className='buscar' onClick={() => goToMapaUbi()}>Buscar</button>
+          
+          <Nav></Nav>
         {/*<button className='buscar' onClick={() => getUsuario()}>encontrar usuario</button> */}
       </div>
       {/*<div className="datos">
