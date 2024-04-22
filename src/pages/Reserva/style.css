@@ -169,9 +169,10 @@
 
 /* ESTO ES EL CSS DE PAGINA FICHA */
 
-.chars_ficha_conteneder {
+
+.contenedor-ficha {
     display: flex;
-    height: 840px;
+    height: 860px;
     flex-wrap: wrap;
 }
 
@@ -290,45 +291,89 @@
 .button {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     text-decoration: none;
+    width: 100%;
+    height: 30px;
+    padding-bottom: 20px;
 }
 
 .button_1 {
     width: 60%;
-    height: 30px;
     font-size: 20px;
     color: white;
     font-size: 20px;
     background-color: rgb(255, 155, 51);
     border-radius: 5px;
+
 }
 
-.sli {}
+/*PASARELA DE RESERVAS*/
 
-/* .sli.swiper {
+
+.contenedor-pasarela {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contenedor-titulo {
+    margin: 30px;
+    margin-bottom: 5px;
+}
+
+.contenedor-titulo_s {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.titulo-p {
+    display: flex;
     width: 100%;
-    height: 265px;
-}
-
-.sli.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-/* display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
+}
 
-/* .sli.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-*/
+.texto-tp {
+    width: 32%;
+}
+
+.contenedor-precios {
+    height: 70%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.precio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.texto-p {
+    width: 32%;
+}
+
+.texto-p_1 {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.line {
+    height: 1px;
+    background-color: black;
+
+}
+
+.boton-pasarela {
+    display: flex;
+}
 
 /* ESTO ES EL CSS DE PAGINA THANKS */
 .back {
