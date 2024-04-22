@@ -1,17 +1,23 @@
 //import React from 'react'
 import './login.css'
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import LoginUser from "../../components/loginUser/LoginUser.jsx";
 import RegUser from "../../components/regUser/RegUser.jsx";
+//import {HomeUbiResContext} from '../../components/homeUbiRes/HomeUbiResContext.jsx';
+
 
 const Login = () => {
 
     const [typeLogin, setTypeLogin] = useState('login');
     const [buttonText, setButonText] = useState('Inicia sesión');
+    //const {email} = useContext(HomeUbiResContext);
+    //const {setEmail} = useContext(HomeUbiResContext);
+    
+
     const [usuario, setUsuario] = useState({
         email: "",
         nombre: "",
@@ -49,7 +55,9 @@ const Login = () => {
             if (res2.data.data.token) {
                 setToken(res2.data.data.token);
                 localStorageData('Token', res2.data.data.token);
-                res2.data.data.token && navigate('/home');
+                console.log(usuario.email);
+                setEmail(usuario.email);
+                res2.data.data.token && navigate('/reserva');
             } else if (res2.data.data === null) {
                 res2.data.data = null && setErrorMessage(res2.data.data.message);
                 console.log(res2.data.data.status, res2.data.data.message)
