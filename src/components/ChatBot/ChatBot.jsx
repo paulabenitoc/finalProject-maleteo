@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import ChatBot from 'react-simple-chatbot'; 
-import './ChatBot.css'
+import '../../pages/Usuario/DialogStyles.css'
 
 const theme = {
     background: '#fff',

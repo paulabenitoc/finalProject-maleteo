@@ -49,7 +49,7 @@ const Confirmacion = () => {
             </div>
             <div className="user-buttons">
                 <button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Aceptar</button>
-                <Dialog visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)}>
+                <Dialog visible={visible} style={{ width: '100vw' }} onHide={() => setVisible(false)}>
                 <ChatBot onSubmit={handleSubmit}></ChatBot>
                 </Dialog>
               <a href='' className='delete-confirmacion'>Declinar</a>
