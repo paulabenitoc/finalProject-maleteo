@@ -21,7 +21,7 @@ export default function Guardian({ onSubmit }) {
                 <fieldset className='formGuardian'>
                     <div className='description-formGuardian'>
                         <legend className='title-formGuardian'>Describe tu espacio</legend>
-                        <button type="submit" disabled={!isValid} className='button-formGuardian'>Continuar</button>
+                        <button type="submit" disabled={!isValid} className='button-formGuardian' onClick={() => window.location.href = 'http://localhost:5173/espacio'}>Continuar</button>
                     </div>
                     <label className='item-space'>
                         <input type="text" {...register("ubicacion")} placeholder="Ubicación" className='item-spaceHolder' />
