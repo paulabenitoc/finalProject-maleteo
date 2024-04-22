@@ -1,20 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Dialog } from 'primereact/dialog';
 import Guardian from './Guardian/Guardian';
 import Nav from '../../components/nav/nav';
+import axios from 'axios';
 import { useNavigate, } from 'react-router-dom';
+import { HomeUbiResContext } from '../../components/homeUbiRes/HomeUbiResContext';
 import './Usuario.css';
 import './DialogStyles.css';
 
 function Usuario() {
   const navigate = useNavigate();
+  const [usuario, setUsuario] = useState([]);
   const [guardianes, setGuardianes] = useState([]);
   const [visible, setVisible] = useState(false);
+  const {email} = useContext(HomeUbiResContext); 
   const logOutSubmit = () => {
     localStorage.removeItem('Token');
     navigate('/login');
   }
   
+  const getUsuario = async() => {
+    const {data} = await axios('http://localhost:3002/usuarios');
+      data.data.filter((x) => {
+      if (x.email == email) {
+        setUsuario(x);
+        console.log(x);
+        return x;
+      }
+    });
+    
+  }
 
   const handleSubmit = (data) => {
     console.log("Datos enviados:", data);
@@ -23,6 +38,7 @@ function Usuario() {
   useEffect(() => {
     const obtenerGuardianes = async () => {
       try {
+        getUsuario();
         const response = await fetch('http://localhost:3002/guardian');
         const data = await response.json();
         console.log(data);
@@ -38,16 +54,24 @@ function Usuario() {
   }, []);
 
   return (
-    <div>
-      {guardianes.length > 0 && (
-        <div className="user-profile">
-          <span>
-            <h4 className='user-profileName'>{guardianes[0].nombre}</h4>
-            <p className='user-profileEdit'>Puedes ver y editar tu perfil</p>
-          </span>
-          <img src={guardianes[0].fotos} alt={guardianes[0].nombre} className="user-img" />
-        </div>
-      )}
+    <div >
+      <span className="user-profile">
+        <h4 className='user-profileName'>{usuario.nombre}</h4>
+        <p className='user-profileEdit'>Puedes ver y editar tu perfil</p>
+      </span>
+
+    {/* {usuario.map((item, index)=> {
+        return (
+          <div key={index} className="user-profile">
+            <span>
+              <h4 className='user-profileName'>{item.nombre}</h4>
+              
+            </span>
+            <img src={item.fotos} alt={item.nombre} className="user-img" />
+          </div>
+        )
+      })} */}
+
       <div className='menu-userOptions'>
         <div className='user-userOptions'>
           <button className='userRegister-button' label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>
