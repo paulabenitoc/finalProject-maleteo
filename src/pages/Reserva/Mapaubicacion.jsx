@@ -4,14 +4,18 @@ import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './style.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Nav from '../../components/nav/nav';
+import Slider from '../../components/Swiper/Slider';
+
 
 
 export default function MapaUbicacion() {
     const geocoderContainer = useRef(null);
     const mapContainer = useRef(null);
     const [characters, setCharacters] = useState([]);
+
+
 
     const getCharacters = () => {
 
@@ -54,22 +58,26 @@ export default function MapaUbicacion() {
 
             <div className="chars">
 
-                {characters.map((character, index) => (<div className='card' key={index}>
+                {/* {characters.map((character, index) => (
 
-                    <div className='boton'>
-                        <Link to='/mapaubicacioncpy' className="div-button">
-                            <button className="forward">
-                                <img className='imagenlugar' src={character.fotoLugar} />
-                            </button>
-                        </Link>
-                    </div>
-                    <h2>{character.nombre}</h2>
-                    <img className='imagenguard' src={character.fotos} />
-                    <p>{character.ubicacion}</p>
+                    // <div className='card' key={index}>
 
-                </div>))}
+                    //     <div className='boton'>
+                    //         <Link to='/mapaubicacioncpy' className="div-button">
+                    //             <button className="forward">
+                    //                 <img className='imagenlugar' src={character.fotoLugar} />
+                    //             </button>
+                    //         </Link>
+                    //     </div>
+                    //     <h2>{character.nombre}</h2>
+                    //     <img className='imagenguard' src={character.fotos} />
+                    //     <p>{character.ubicacion}</p>
+
+                    // </div>))} */}
+                <Slider characters={characters} />
 
             </div>
+
             <Nav className='navi'></Nav>
         </>
 

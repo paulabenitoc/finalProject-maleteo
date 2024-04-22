@@ -14,10 +14,33 @@
     position: absolute;
     width: 100%;
     height: 185px;
-    bottom: 0;
+    bottom: 70px;
     border-radius: 10px;
 
 }
+
+
+/* .chars .swiper {
+    width: 100%;
+    height: 190px;
+} */
+
+/* .chars .swiper-slide {
+    text-align: center;
+    font-size: 5px;
+    background: #fff;
+
+    /* Center slide text vertically */
+/* display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* .chars .swiper-slide img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+} */
 
 .navi {
     position: absolute;
@@ -48,12 +71,261 @@
     position: relative;
 }
 
+
+/*ESTO ES EL CSS DE PAGINA MAPAUBICACIONCPY*/
+.Back {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-back {
+    margin-left: 10px;
+    width: 100%;
+    height: 150px;
+}
+
+.chars-detalle {
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    bottom: 55px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    border-color: white;
+}
+
+.iconito {
+    position: absolute;
+    bottom: 390px;
+}
+
+.chars-mapa {
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    bottom: 207px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.chars-mapa1 {
+    gap: 15px;
+    align-items: center;
+    width: 90%;
+    bottom: 15px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.usuario-mapa {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.usuario_i {
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.imagen-mapa {
+    border-radius: 14px;
+    width: 80px;
+}
+
+.imagen-mapa1 {
+    margin-left: 10px;
+    width: 100%;
+    height: 150px;
+}
+
+/* ESTO ES EL CSS DE PAGINA FICHA */
+
+.chars_ficha_conteneder {
+    display: flex;
+    height: 840px;
+    flex-wrap: wrap;
+}
+
+/* las img de lugares */
+.chars_ficha {
+    display: flex;
+    width: 100%;
+}
+
+.imagenlugar_ficha {
+    width: 100vw;
+    height: 30vh;
+}
+
+/* aqui acaban las img de lugar */
+.imagenguard_ficha {
+    width: 70px;
+    height: 70px;
+}
+
+.chars_usuario {
+    display: flex;
+    width: 414px;
+    height: 16%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imagen1 {
+    border-radius: 10px;
+    width: 90px;
+}
+
+.imagenValoracion {
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.chars_usuario_i {
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.chars_usuario_d {
+    margin: 0;
+}
+
+.chars_usuario_p {
+    font-size: 10px;
+}
+
+.chars_usuario_h {
+    font-size: 20px;
+}
+
+.rapido {
+    display: flex;
+    width: 50%;
+    margin-left: 40px;
+    justify-content: flex-start;
+}
+
+.encuesta {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.encuesta_div {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.encuesta_texto {
+    width: 70%;
+}
+
+.encuesta_img {
+    width: 60px;
+}
+
+.encuesta_95 {
+    font-size: 33px;
+    color: rgb(255, 155, 51);
+}
+
+.encuesta_h {
+    font-size: 18px;
+}
+
+.encuesta_p {
+    font-size: 14px;
+}
+
+.texto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.texto_1 {
+    border-top: 1px solid black;
+    width: 80%;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.button_1 {
+    width: 60%;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(255, 155, 51);
+    border-radius: 5px;
+}
+
+.sli {}
+
+/* .sli.swiper {
+    width: 100%;
+    height: 265px;
+}
+
+.sli.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+/* display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .sli.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+*/
+
 /* ESTO ES EL CSS DE PAGINA THANKS */
 .back {
     display: flex;
     justify-content: flex-end;
     margin-right: 25px;
     margin-top: 20px;
+}
+
+.Back-thx {
+    text-align: end;
+    margin-right: 40px;
+    margin-top: 25px;
 }
 
 .res {

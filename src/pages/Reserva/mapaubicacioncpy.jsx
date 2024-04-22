@@ -5,7 +5,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './style.css';
 import Forward from '../../components/Forward/Forward';
-
+import Nav from '../../components/nav/nav';
 
 export default function MapaUbicacioncpy() {
     const geocoderContainer = useRef(null);
@@ -49,17 +49,39 @@ export default function MapaUbicacioncpy() {
 
             <div className='mapss' id='map' ref={mapContainer}></div>
 
+            <div>
 
-            <div className="chars">
-                <Forward />
-                {characters.map((character, index) => (<div key={index}>
-                    <h2>{character.nombre}</h2>
-                    <img className='imagenguard' src={character.fotos} />
-                    <p>{character.ubicacion}</p>
-                </div>))}
+                <div className="chars-detalle">
+                    <div className='iconito'><img className='imagen-iconito' src='public/lugarYusuarios/c.png' /></div>
+                    <div className='chars-mapa'>
+                        <Forward >  </Forward>
+                        <section className='usuario-mapa'>
+                            <div className='usuario_i'>
+                                <h3 className='chars_usuario_h2'>Maria Gonzalez</h3>
+                                <img className='imagen-mapa' src='public/lugarYusuarios/u1.png' />
+                                <img className='imagenValoracion' src='public/lugarYusuarios/valoracion.png' />
+                                <p className='chars_usuario_p'>Plaça de l'Ajuntament, 1, 46002 València</p>
+                                <p className='chars_usuario_p'>5 minutos a pie</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div className='chars-mapa1'>
+                        <div className='Back'><img className='imagen-mapa1' src='public/lugarYusuarios/s4.png' /></div>
+                        <section className='usuario-mapa'>
+                            <div className='usuario_i'>
+                                <h3 className='chars_usuario_h2'>Juan Perez</h3>
+                                <img className='imagen-mapa' src='public/lugarYusuarios/u5.png' />
+                                <img className='imagenValoracion' src='public/lugarYusuarios/valoracion.png' />
+                                <p className='chars_usuario_p'>Av Professor López Piñero, 7, 46013 València</p>
+                                <p className='chars_usuario_p'>15 minutos a pie</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
 
             </div>
 
+            <Nav className='navi'></Nav>
         </>
     )
 }
