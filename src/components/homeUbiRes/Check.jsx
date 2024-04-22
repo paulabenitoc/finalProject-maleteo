@@ -1,7 +1,7 @@
-import React, { useState, useContext} from 'react';
-import { HomeUbiResContext } from './HomeUbiResContext';
-import { useNavigate, NavLink } from 'react-router-dom';
-import { Calendar } from 'primereact/calendar';
+import React, { useState, useContext, useEffect} from 'react';
+import {HomeUbiResContext } from './HomeUbiResContext';
+import {useNavigate, NavLink } from 'react-router-dom';
+import {Calendar } from 'primereact/calendar';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
@@ -16,6 +16,10 @@ const Check = () => {
   const {setdRetirada} = useContext(HomeUbiResContext);
   const [deposito, setDeposito] = useState(null);
   const [retirada, setRetirada] = useState(null);
+
+  useEffect(() => {
+    document.documentElement.classList.remove('hide-scrollbar');
+  },[])
   
   addLocale('es', {
     firstDayOfWeek: 1,
@@ -43,10 +47,6 @@ const Check = () => {
     }
   }
 
-  const atras = () => {
-    
-  }
-
   return (
     <>
       <div className='top'>
@@ -57,7 +57,7 @@ const Check = () => {
       <div className='calendarios'>
         <Calendar value={deposito} minDate={fechaActual} onChange={(e) => {setDeposito(e.value);setRetirada(null)}} inline hourFormat="24" locale="es"/>
         <Calendar value={retirada} minDate={deposito}  onChange={(e) => setRetirada(e.value)} inline hourFormat="24" locale="es"/>
-        <button className='buscar pd' onClick={()=>{goToHoras()}}>Continuar</button>
+        <button className='buscar pd' onClick={()=>goToHoras()}>Continuar</button>
       </div>
     </>
   )

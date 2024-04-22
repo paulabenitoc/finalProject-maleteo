@@ -2,34 +2,29 @@
     display: flex;
     flex-direction: row;
     padding: 5px;
-    border-bottom: 0.5px solid #000;
-        padding-right: 0px;
-            margin-right: 15px;
-            margin-left: 0px;
-            padding-left: 0px;
-            padding-top: 10px;
+    border-bottom: 0.25px solid rgba(0, 0, 0, 0.5);
+    padding-right: 0px;
+    margin-right: 15px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+
+.user-profileConfir{
+    
 }
 
 .confirmacion-page{
+    margin-right: 15px;
     margin-left: 15px;
 }
 
 .reservation {
     font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
 }
 
-.peticion-reserva{
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.user-profile {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
 
 .user-info {
     display: flex;
@@ -37,34 +32,36 @@
     margin-right: 8%;
 }
 
-.user-info h4,
-.user-info p {
-    margin: 0;
+.delete-confirmacion{
+    font-size: 13px;
 }
-
-.user-info p {
+.user-info-name{
+   margin: 0; 
+}
+.text-inf{
+    margin: 0;
     color: #666666;
 }
 
+
 .user-buttons {
     display: flex;
-    width: 44px;
     height: 30px;
     flex-direction: column;
     align-items: center;
 }
 
-.user-buttons a {
+.delete-confirmacion{
     text-decoration: none;
     color: #0095BE;
 }
 
-.user-buttons button {
+.user-acept{
     font-size: 13px;
     margin-bottom: 10px;
     color: white;
     background-color: #F68F24;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     padding: 10px;
 }

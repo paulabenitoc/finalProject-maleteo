@@ -34,12 +34,29 @@ function App() {
   const [numPiezas, setNumPiezas] = useState(null);
   const [tarifa, setTarifa] = useState(null);
   const [total, setTotal] = useState(null);
+  const [email, setEmail] = useState(null);
+  //en el provider pongo el email y set email
+  //const {email} = useContext(HomeUbiResContext);
+  /*
+  
+  /*const getUsuario = async() => {
+    const {data} = await axios('http://localhost:3002/usuarios');
+    let usuario = data.data.filter((x) => {
+      return x.email == "juan.perez@example.com";
+    });
+    console.log(usuario);
+  }*/
+
+  //const {setEmail} = useContext(HomeUbiResContext);setEmail() esto en el archivo de gustavo
+
+
+
   return (
     <>
       <PrimeReactProvider>
         <HomeUbiResContext.Provider value={{
           ciudad, setCiudad, idMarker, setMarker, markerUbi, setMarkerUbi, miUbi, setMiUbi, dias, setDias,
-          horas, setHoras, tarifa, setTarifa, total, setTotal, numPiezas, setNumPiezas, dDeposito, setdDeposito, dRetirada, setdRetirada
+          horas, setHoras, tarifa, setTarifa, total, setTotal, numPiezas, setNumPiezas, dDeposito, setdDeposito, dRetirada, setdRetirada, email, setEmail
         }}>
 
           <Router>
@@ -60,6 +77,8 @@ function App() {
               <Route path='/ficha' element={<Ficha />} />
               <Route path='/pasarelareserva' element={<PasarelaReserva />} />
               <Route path='/thanks' element={<Thanks />} />
+              <Route path='/espacio' element={<Espacio />} />
+              <Route path='/servicios' element={<Servicios />} />
             </Routes>
           </Router>
         </HomeUbiResContext.Provider>

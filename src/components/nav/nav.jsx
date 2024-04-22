@@ -8,22 +8,22 @@ const Nav = () => {
     <nav className='nav-menu'>
       <ul className='nav-bar'>
         <li className='nav-item'>
-          <Link to="/home">
+          <Link to="/reserva">
             <img src="public/img/inicio@2x.png" alt="home icon" className='nav-icon' />
           </Link>
         </li>
         <li className='nav-item'>
-          <Link to="/search">
+          <Link to="/reserva/ubicacion">
             <img src="public/img/buscar@2x.png" alt="search icon" className='nav-icon'/>
           </Link>
         </li>
         <li className='nav-item'>
-          <Link to="/chat">
+          <Link to="/confirmacion">
             <img src="public/img/mensaje@2x.png" alt="chat icon" className='nav-icon'/>
           </Link>
         </li>
         <li className='nav-item'>
-          <Link to="/user">
+          <Link to="/usuario">
             <img src="public/img/usuario@2x.png" alt="user icon" className='nav-icon'/>
           </Link>
         </li>

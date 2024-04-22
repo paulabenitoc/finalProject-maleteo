@@ -1,0 +1,76 @@
+.title_box {
+    margin-top: 20%;
+}
+
+.title_text {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.espacio-propiedad {
+    justify-content: flex-start;
+    position: unset;
+    background-color: white;
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-color: rgb(225, 221, 221);
+    text-align: start;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+.espacio-option {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+.espacio-barra {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.next_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-top: 60%;
+}
+
+.opciones {
+    padding: 5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-top: 1px solid #cccccc;
+}
+
+.flecha {
+    width: 65%;
+}
+
+.with-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo gris transparente */
+}
+
+.menu-open {
+    background-color: grey;
+    /* Cambia el color de fondo del botón a gris cuando el menú está abierto */
+}
+
+.espacio-barra {
+    border-style: inset;
+    border-width: 1px;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}

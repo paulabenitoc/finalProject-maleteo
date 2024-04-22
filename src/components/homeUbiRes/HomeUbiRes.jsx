@@ -6,6 +6,8 @@ import imgCal from '../../../public/images/calendario.png';
 import imgMaleta from '../../../public/images/maleta.png';
 import { useNavigate } from 'react-router-dom';
 import moment from 'moment';
+import Swal from 'sweetalert2';
+import axios from 'axios';
 import './HomeUbiRes.css';
 
 const HomeUbiRes = () => {
@@ -63,8 +65,30 @@ const HomeUbiRes = () => {
     });
 
     const goToMapaUbi = () => {
-      //boton condicional
-      navigate('/mapaubicacion');
+      if(localStorage.getItem('Token')){
+        //console.log('usuario logeado');
+        if((dDeposito == null) || (dRetirada == null)){
+          Swal.fire({
+            icon: "error",
+            title: "Al menos rellena los dias de deposito y retirada"
+          });          
+        }else{
+          console.log(ciudad);
+          navigate('/mapaubicacion');
+        }
+      }else{
+        //console.log('usuario no logeado');
+        Swal.fire({
+          icon: "error",
+          title: "Debes logearte para poder hacer reservas",
+          confirmButtonText: "Pulsa aqui para logearte",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            navigate('/login');
+          }
+        });;
+      }
+      //navigate('/mapaubicacion');
     }
 
     return (
@@ -97,6 +121,7 @@ const HomeUbiRes = () => {
         </div>
         
         <button className='buscar' onClick={() => goToMapaUbi()}>Buscar</button>
+        {/*<button className='buscar' onClick={() => getUsuario()}>encontrar usuario</button> */}
       </div>
       {/*<div className="datos">
         <div className="flex-auto">
